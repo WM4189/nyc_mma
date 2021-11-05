@@ -1,3 +1,17 @@
+
+form input, form textarea {
+  width: 16rem;
+  padding: 0.5rem;
+  max-width: 85%;
+}
+
+form label {
+  display: inline-block;
+  width: 6rem;
+  vertical-align: top;
+  padding: 0.5rem;
+}
+
 .App {
   text-align: center;
 }
