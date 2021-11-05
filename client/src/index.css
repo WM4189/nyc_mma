@@ -1,10 +1,8 @@
 body {
+  background-color: #eee9db;
+  font-family: "Oxygen", "Trebuchet MS", Arial, sans-serif;
+  color: #41392f;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
@@ -13,20 +11,67 @@ code {
 }
 
 
-.authForm {
-  display: flex;
-  align-items: center;
-  justify-content: center;  
+body {
+  background-color: #eee9db;
+  font-family: "Oxygen", "Trebuchet MS", Arial, sans-serif;
+  color: #41392f;
 }
 
-.authForm form {
+
+.authForm {
+  display:flex;
+  align-items: center;
+  justify-content: center;  
   margin: 4em auto;
   width: 50%;
-  background: rgba(255,255,255,0.92);
+  background: rgba(181, 181, 181, 0.92);
   text-align:center;
+  border: 2px solid #40413f;
 }
-.authForm button {
-  background: #00f;
-  color: white;
-  padding: 1rem 4rem;
+
+a {
+	text-decoration: none;
+
 }
+
+button {
+  padding: 10px 23px;
+  border-radius: 5px;
+  border: 2px solid #40413f;
+  background-color:transparent;
+  color: #000000;
+  font-size: 1.375em;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out;
+  margin: .25em;
+}
+
+.button {
+  padding: 10px 23px;
+  border-radius: 5px;
+  border: 2px solid #40413f;
+  background-color:transparent;
+  color: #000000;
+  font-size: 1.375em;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out;
+  margin: .25em;
+}
+
+.button:hover {
+  color: rgb(135, 135, 135);
+  background-color: #757674;
+  border: 2px solid #616161;
+}
+
+button:hover {
+  color: rgb(135, 135, 135);
+  background-color: #757674;
+  border: 2px solid #616161;
+}
+
+

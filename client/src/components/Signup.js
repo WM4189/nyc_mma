@@ -36,7 +36,7 @@ function Signup({ setCurrentUser }) {
   return (
     <div className="authForm">
       <form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
+        <h1>Create an Account</h1>
         <p>
           <label 
             htmlFor="username"
@@ -78,7 +78,7 @@ function Signup({ setCurrentUser }) {
         </p>
         <p><button type="submit">Sign Up</button></p>
         <p>-- or --</p>
-        <p><Link to="/">Log In</Link></p>
+        <p className="button"><Link to="/">Log In</Link></p>
       </form>
     </div>
   )

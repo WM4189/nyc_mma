@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Redirect, useHistory, Link } from 'react-router-dom'
+import { Redirect, useHistory, NavLink } from 'react-router-dom'
+
 
 function Login({ setCurrentUser }) {
   const history = useHistory()
@@ -34,7 +35,7 @@ function Login({ setCurrentUser }) {
     <div className="authForm">
       <Redirect to="/" />
       <form onSubmit={handleSubmit}>
-        <h1>Log In</h1>
+        <h1>Welcome</h1>
         <p>
           <label 
             htmlFor="username"
@@ -63,7 +64,7 @@ function Login({ setCurrentUser }) {
         </p>
         <p><button type="submit">Log In</button></p>
         <p>-- or --</p>
-        <p><Link to="/signup">Sign Up</Link></p>
+        <p className="button"><NavLink to="/signup" >Sign Up</NavLink></p>
       </form>
     </div>
   )
