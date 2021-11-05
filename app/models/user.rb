@@ -2,6 +2,9 @@ class User < ApplicationRecord
     has_many :user_gyms, dependent: :destroy
     has_many :gyms, through: :user_gyms
     
+    validates :username, uniqueness: true
+    validates :email, uniqueness: true, allow_blank: true
+
     has_secure_password
 
 

@@ -2,6 +2,9 @@ class Gym < ApplicationRecord
     has_many :user_gyms, dependent: :destroy
     has_many :users, through: :user_gyms
 
+    validates :name, uniqueness: true
+
+
     def average_gym_rating
         num = user_gyms.pluck(:rating).count
         sum = user_gyms.sum {|x| x.rating}
