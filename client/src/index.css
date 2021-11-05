@@ -57,14 +57,14 @@ button {
 }
 
 .button:hover {
-  color: rgb(135, 135, 135);
+  color: rgb(255, 255, 255);
   background-color: #757674;
   border: 2px solid #616161;
   box-shadow: 5px 5px 2.5px grey;
 }
 
 button:hover {
-  color: rgb(135, 135, 135);
+  color: rgb(255, 255, 255);
   background-color: #757674;
   border: 2px solid #616161;
   box-shadow: 10px 10px 5px grey;
