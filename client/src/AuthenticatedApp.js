@@ -5,6 +5,13 @@ import Train from './components/Train'
 import Profile from './components/Profile'
 import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
 
+
+import Bjj from './LearnComp/Bjj'
+import Boxing from './LearnComp/Boxing'
+import Capoeira from './LearnComp/Capoeira'
+import Jkd from './LearnComp/Jkd'
+import Thai from './LearnComp/Thai'
+
 const linkStyles = {
   display: "inline-block",
   borderRadius: "20px",
@@ -40,7 +47,7 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
           <NavLink to="/train" style={linkStyles} activeStyle={{background: "gray"}}>Train</NavLink>
           <NavLink to="/profile" style={linkStyles} activeStyle={{background: "gray"}}>{currentUser.username}</NavLink>{" - "}
         </span>
-        <span>Logged in as {currentUser.username} <button onClick={handleLogout}>Logout</button></span>
+        <span>Logged in as {currentUser.email} <button onClick={handleLogout}>Logout</button></span>
       </nav>
       <Switch>
 
@@ -58,6 +65,26 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
 
         <Route exact path="/home">
           <Home currentUser={currentUser} />
+        </Route>
+
+        <Route path='/bjj'>
+          <Bjj />
+        </Route>
+
+        <Route path='/boxing'>
+          <Boxing />
+        </Route>
+
+        <Route path='/capoeira'>
+          <Capoeira />
+        </Route>
+
+        <Route path='/jkd'>
+          <Jkd />
+        </Route>
+
+        <Route path='/thai'>
+          <Thai />
         </Route>
         {/* <Redirect to="/home" /> */}
       </Switch>

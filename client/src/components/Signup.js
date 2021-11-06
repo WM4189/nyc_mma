@@ -106,7 +106,7 @@ function Signup({ setCurrentUser }) {
         </p>
         <p><button type="submit">Sign Up</button></p>
         <p>-- or --</p>
-        <p id="nav"><NavLink to="/" style={linkStyles} >Log In</NavLink></p>
+        <p><NavLink to="/" style={linkStyles} >Log In</NavLink></p>
       </form>
     </div>
   )
