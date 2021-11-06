@@ -1,6 +1,19 @@
 import React, { useState } from 'react'
 import { Redirect, useHistory, NavLink } from 'react-router-dom'
 
+const linkStyles = {
+  display: "inline-block",
+  borderRadius: "20px",
+  width: "100px",
+  padding: "5px",
+  margin: "0 6px 6px",
+  background: "transparent",
+  textDecoration: "none",
+  color: "black",
+  backgroundColor:"transparent",
+  transition: "background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out" 
+};
+
 
 function Login({ setCurrentUser }) {
   const history = useHistory()
@@ -64,7 +77,7 @@ function Login({ setCurrentUser }) {
         </p>
         <p><button type="submit">Log In</button></p>
         <p>-- or --</p>
-        <p className="button"><NavLink to="/signup" >Sign Up</NavLink></p>
+        <p><NavLink to="/signup" style={linkStyles}  >Sign Up</NavLink></p>
       </form>
     </div>
   )

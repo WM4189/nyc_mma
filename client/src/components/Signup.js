@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory, NavLink } from 'react-router-dom'
 
 function Signup({ setCurrentUser }) {
   const history = useHistory()
@@ -7,6 +7,19 @@ function Signup({ setCurrentUser }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [passwordConfirmation, setPasswordConfirmation] = useState('')
+
+  const linkStyles = {
+    display: "inline-block",
+    borderRadius: "20px",
+    width: "100px",
+    padding: "5px",
+    margin: "0 6px 6px",
+    background: "transparent",
+    textDecoration: "none",
+    color: "black",
+    backgroundColor:"transparent",
+    transition: "background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out" 
+  };
   
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -93,7 +106,7 @@ function Signup({ setCurrentUser }) {
         </p>
         <p><button type="submit">Sign Up</button></p>
         <p>-- or --</p>
-        <p className="button"><Link to="/">Log In</Link></p>
+        <p id="nav"><NavLink to="/" style={linkStyles} >Log In</NavLink></p>
       </form>
     </div>
   )
