@@ -16,24 +16,26 @@ function Train (){
   const filteredList = 
 	  gyms.filter(dojo => dojo.name.toLowerCase().includes(filter.toLowerCase()) || dojo.art.toLowerCase().includes(filter.toLowerCase()))
       .sort((dojo1, dojo2) => {
-          return dojo1.average_rating - dojo2.average_rating
+          return dojo2.average_rating - dojo1.average_rating
       })
 
 
   const reviews = gyms.map(gym => gym.user_gyms.map(rev => rev.review) )
 
+      console.log(reviews)
     return(
         <>
         <h1>NYC Based Gyms</h1>
         
         <GymFilter filter={filter} setFilter={setFilter} />
 
+
+
         {filteredList.map(g => (
             <GymContainer
                 key={uid(g)}
                 name={g.name}
                 address={g.address}
-                hours={g.hours}
                 average_rating={g.average_rating}
                 link={g.link}
                 art={g.art}

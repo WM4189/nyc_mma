@@ -36,7 +36,7 @@ function Login({ setCurrentUser }) {
             history.push('/home')
           })
         } else {
-          setCurrentUser({ username: "wm" })
+          setCurrentUser({ username: "guest" })
           history.push('/home')
           res.json().then(errors => {
             console.error(errors)

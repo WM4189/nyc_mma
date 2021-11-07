@@ -1,28 +1,31 @@
 import ReviewForm from './ReviewForm'
+import {uid} from 'react-uid';
 
 function GymContainer(props){
-    const {name, address, hours, average_rating, link, art, review} = props
+    const {name, address, average_rating, link, art, review} = props
 
    const gymName = {
     textDecoration: "underline"
     }
+
 // console.log(review)
-const reviews = review.map(rev =>rev.map(r => <p><li><em>{r}</em></li></p>) )
+const reviews = review.map(rev =>rev.map(r =>  <p><li><em>{r}</em></li></p>) )
+// console.log(reviews)
     return(
     <div className="centered">
         <section className="cards">
 
-            <article id="card" className="card">
+            <article key={uid(name)} id="card" className="card">
                 <h3 style={gymName}>{name}</h3>
                 <strong className="art">{art} Focused</strong>
                 <p>{address}</p>
-                <a className='gym' href={link}>{link}</a>
+                <a className='gym' href={link}>Website Link</a>
                 <br />
                 <br />
                 <strong><p>Reviews:</p></strong>
-                {reviews}
+                {/* {reviews} */}
             </article>
-
+{/* 
             <article className="card">
             <p>content for card two</p>
             </article>
@@ -46,7 +49,7 @@ const reviews = review.map(rev =>rev.map(r => <p><li><em>{r}</em></li></p>) )
             <article className="card">
             <p>content for card seven</p>
             </article>
-
+ */}
         </section>
     </div>
     )

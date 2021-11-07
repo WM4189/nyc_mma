@@ -32,7 +32,7 @@ class GymsController < ApplicationController
     private
 
     def gym_params
-        params.permit(:name, :address, :hours, :link, :art)
+        params.permit(:name, :address, :link, :art)
     end
 
     # def render_unprocessable_params
