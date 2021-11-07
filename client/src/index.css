@@ -1,3 +1,10 @@
+.searchbar{
+  border-radius: 9px;
+  width: 12rem;
+  padding: 0.3rem;
+  max-width: 85%;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -103,25 +110,6 @@ a, button:hover {
   border: 2px solid #616161;
   box-shadow: 10px 10px 5px grey;
 }
-
-/* #header:hover{
-    color: rgb(255, 255, 255);
-    background-color: #757674;
-    border: 2px;
-    box-shadow: 10px 10px 5px grey;
-  }
-
-  #header{
-    display: inline-block;
-    border-radius: 20px;
-    width: 100px;
-    padding: 5px;
-    margin: 0px 6px 6px;
-    background: transparent;
-    text-decoration: none;
-    color: black;
-    transition: background-color 0.15s ease-in-out 0s, border 0.15s ease-in-out 0s, color 0.15s ease-in-out 0s;
-  } */
 
 a:hover {
   color: gray;

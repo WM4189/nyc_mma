@@ -14,7 +14,7 @@ const reviews = review.map(rev =>rev.map(r => <p><li><em>{r}</em></li></p>) )
 
             <article id="card" className="card">
                 <h3 style={gymName}>{name}</h3>
-                <strong className="art">{art} Focused Gym</strong>
+                <strong className="art">{art} Focused</strong>
                 <p>{address}</p>
                 <a className='gym' href={link}>{link}</a>
                 <br />
