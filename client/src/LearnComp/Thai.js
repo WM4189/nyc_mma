@@ -1,27 +1,24 @@
-import { useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const linkStyles = {
-    fontSize: ".85em",
     display: "inline-block",
-    borderRadius: "10px",
-    width: "50",
+    width: "100px",
     padding: "5px",
     margin: "0 6px 6px",
-    background: "transparent",
+    background: "black",
     textDecoration: "none",
-    color: "black",
-    backgroundColor:"black",
-  transition: "background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out" 
+    color: "white",
   };
 
-
 function Thai (){
-    const history = useHistory();
     return(
-        <div id="art">
-        Explore Another Art
-        <button style={linkStyles} onClick={() => history.goBack()}></button>
-        </div>
+        <nav>
+            <NavLink to="/bjj" style={linkStyles} activeStyle={{background: "gray"}}>BJJ</NavLink>
+            <NavLink to="/boxing" style={linkStyles} activeStyle={{background: "gray"}}>Boxing</NavLink>
+            <NavLink to="/capoeira" style={linkStyles} activeStyle={{background: "gray"}}>Capoeira</NavLink>
+            <NavLink to="/jkd" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
+            <NavLink to="/thai" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
+        </nav>
     )
 }
 

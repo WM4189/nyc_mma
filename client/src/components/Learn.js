@@ -1,9 +1,10 @@
-import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
+// import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
+// import Bjj from '../LearnComp/Bjj'
+// import Boxing from '../LearnComp/Boxing'
+// import Capoeira from '../LearnComp/Capoeira'
+// import Jkd from '../LearnComp/Jkd'
+import { NavLink } from 'react-router-dom'
 
-import Bjj from '../LearnComp/Bjj'
-import Boxing from '../LearnComp/Boxing'
-import Capoeira from '../LearnComp/Capoeira'
-import Jkd from '../LearnComp/Jkd'
 
 const linkStyles = {
     display: "inline-block",
@@ -25,7 +26,7 @@ function Learn (){
             <NavLink to="/jkd" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
             <NavLink to="/thai" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
             </nav>
-        Learn
+        <h1>Expand Your Mind</h1>
         </div>
     )
 }
