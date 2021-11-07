@@ -1,8 +1,36 @@
-#art{
-  background-color: #eee9db;
-  font-family: "Oxygen", "Trebuchet MS", Arial, sans-serif;
-  color: #41392f;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+.card, #card {
+  padding: 20px 40px;
+  flex: 0 1 24%;
+  border: 2px solid #40413f;
+  box-shadow: 5px 5px 2.5px grey;
+  border-radius: 20px;
+  background: transparent;
+  /* flex: 0 1 calc(25% - 1em); */
+}
+
+.gym{
+  color: #41392f;
+  background-color:transparent;
+  border: none;
+  text-decoration:underline dotted;
+  box-shadow: none;
+}
+
+.gym:hover{
+  color: 41392f;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.art{
+  border: 3px solid #40413f;
 }
 
 code {
@@ -75,6 +103,25 @@ a, button:hover {
   border: 2px solid #616161;
   box-shadow: 10px 10px 5px grey;
 }
+
+/* #header:hover{
+    color: rgb(255, 255, 255);
+    background-color: #757674;
+    border: 2px;
+    box-shadow: 10px 10px 5px grey;
+  }
+
+  #header{
+    display: inline-block;
+    border-radius: 20px;
+    width: 100px;
+    padding: 5px;
+    margin: 0px 6px 6px;
+    background: transparent;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.15s ease-in-out 0s, border 0.15s ease-in-out 0s, color 0.15s ease-in-out 0s;
+  } */
 
 a:hover {
   color: gray;
