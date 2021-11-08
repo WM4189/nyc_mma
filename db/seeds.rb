@@ -40,13 +40,13 @@ User.create(username: "guest", email: "Guest", password: "password")
 
 puts "🌱 Seeding UserGyms..."
 UserGym.create(rating: 4, review: "AMAZING GYM, AMAZING WORKOUTS! The staff here is incredibly friendly and extremely qualified! They know how to push you to the limit in the best way possible with your workouts. You will not leave disappointed! Such a family vibe as soon as you walk in the doors – I highly recommend checking this gym out.", user_id: tonka.id, gym_id: kings.id )
-UserGym.create(rating: 4, review: "Hands down, best choice I’ve made training at (GN). VERY friendly team who make me actually want to go train. I look forward to walking through the doors and always feel amazing when I leave.", user_id: tonka.id, gym_id: unlimited.id )
+UserGym.create(rating: 4, review: "Hands down, best choice I’ve made training at Unlimited. VERY friendly team who make me actually want to go train. I look forward to walking through the doors and always feel amazing when I leave.", user_id: tonka.id, gym_id: unlimited.id )
 
 UserGym.create(rating: 3, review: "I love this place. I highly recommend this place to anyone who wants to get in shape. The trainers are really awesome and helpful, they make you feel really comfortable. The 45 min training goes super fast and you really enjoy doing it. Everyday is a new training, so it is never boring.", user_id: jake.id, gym_id: ultimate.id )
 UserGym.create(rating: 2, review: "I started my membership in early 2020, but cancelled in April due to COVID. I have been waiting for a promised refund ever since. Their emails keep promising 5 days, then 30, then 5-6. I have been a fitness member of a variety of clubs for more than 30 years. This one is THE biggest disappointment!! Don't waste your money. There are other choices!", user_id: jake.id, gym_id: evolution.id )
 
 UserGym.create(rating: 3, review: "Excellent personal training. Trainers who really care and go above and beyond to help you achieve your goals. Small and private gym that feels more personal. Highly recommended!", user_id: luie.id, gym_id: radical.id )
-UserGym.create(rating: 3, review: "I love this place. I highly recommend this place to anyone who wants to get in shape. The trainers are really awesome and helpful, they make you feel really comfortable. The 45 min training goes super fast and you really enjoy doing it. Everyday is a new training, so it is never boring.", user_id: luie.id, gym_id: uma.id )
+UserGym.create(rating: 3, review: "This gym has the best energy, staff, and feel. Everything is so clean, every trainer closely watches and corrects everyone’s form, and a DJ on Saturday. Keep doing exactly what you are doing.", user_id: luie.id, gym_id: uma.id )
 
 UserGym.create(rating: 1, review: "Don't ever go to this gym. They will charge you even after you cancel your membership. Always read before signing and ask for copies and never trust anything they say.", user_id: wm.id, gym_id: maa.id )
 UserGym.create(rating: 5, review: "Spectacular personal trainers and complete, clean gym. Would highly recommend!", user_id: wm.id, gym_id: andersons.id )
