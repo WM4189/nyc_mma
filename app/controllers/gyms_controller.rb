@@ -15,7 +15,7 @@ class GymsController < ApplicationController
 
     def create
         gym = Gym.create!(gym_params)
-        render json: gym, status: :created
+        render json: gym.average_gym_rating, status: :created
     end
 
     def update

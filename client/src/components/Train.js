@@ -3,9 +3,11 @@ import GymContainer from './GymContainer'
 import GymFilter from './GymFilter'
 import {uid} from 'react-uid';
 
-function Train (){
+function Train (props){
+    const user_id = props
     const [filter, setFilter] = useState("")
     const [gyms, setGyms] = useState([]);
+    
 
     useEffect(() => {
     fetch("/gyms")
@@ -27,7 +29,7 @@ function Train (){
 
         {filteredList.map(g => (
             <GymContainer
-                id={g.id}
+                gym_id={g.id}
                 key={uid(g)}
                 name={g.name}
                 address={g.address}
@@ -35,6 +37,7 @@ function Train (){
                 link={g.link}
                 art={g.art}
                 join={g.user_gyms}
+                user_id={user_id}
             />
         ))}
         </>

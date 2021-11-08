@@ -1,5 +1,5 @@
 class UserGymsController < ApplicationController
-
+skip_before_action :authorize 
     def show
         render json: UserGym.find(params[:id]), status: :ok
     end
@@ -10,7 +10,7 @@ class UserGymsController < ApplicationController
 
     def create
         user_gym = UserGym.create!(user_gym_params)
-        render json: user_gym, status: :created
+        render json: user_gym.gym.average_gym_rating, status: :created
     end
 
     def update

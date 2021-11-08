@@ -40,6 +40,8 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
       })
   }
 
+  
+
   return (
     <div className="App">
       <nav>
@@ -58,7 +60,7 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
         </Route>
 
         <Route path="/train">
-        <Train currentUser={currentUser} />
+        <Train currentUser={currentUser} user_id={currentUser} />
         </Route>
 
         <Route path="/profile">
@@ -90,7 +92,7 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
         </Route>
 
         <Route path='/reviews'>
-          <ReviewForm user_id={currentUser.id} />
+          <ReviewForm  />
         </Route>
 
         <Redirect to="/home" />
