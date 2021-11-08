@@ -4,6 +4,8 @@ import Learn from './components/Learn'
 import Train from './components/Train'
 import Profile from './components/Profile'
 import ReviewForm from './components/ReviewForm'
+import GymForm from './components/GymForm'
+
 import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
 
 
@@ -93,6 +95,10 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
 
         <Route path='/reviews'>
           <ReviewForm  />
+        </Route>
+
+        <Route path='/new_gym'>
+          <GymForm  />
         </Route>
 
         <Redirect to="/home" />

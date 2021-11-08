@@ -1,9 +1,12 @@
 
-function Profile (){
+function Profile (props){
+    const {id, username, email, journal} = props.currentUser;
+    // console.log(journal)
     return(
-        <>
-        Profile
-        </>
+        <div>
+        <h1>{username}'s Training Journal</h1>
+        
+        </div>
     )
 }
 

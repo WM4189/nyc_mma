@@ -18,10 +18,8 @@ function ReviewForm(props){
     const location = useLocation()
     const { gymId, userId } = location.state
 
-    console.log(gymId.gym_id)
-    console.log(userId.user_id.user_id.id)
-
-    
+    // console.log(gymId.gym_id)
+    // console.log(userId.user_id.user_id.id)
 
     const [rating, setRating] = useState("");
     const [review, setReview] = useState("");
@@ -47,15 +45,16 @@ function ReviewForm(props){
         });
         setRating("")
         setReview("")
-        history.goBack()
-        // history.push('/train')
+        // history.goBack()
+        history.push('/train')
       }
 
     return(
         <>
-        {/* <section style={{display: 'flex', justifyContent: 'center'}}> */}
         <h1>Add New Review</h1>
         <form onSubmit={handleSubmit}>
+                  <section style={{display: 'flex', justifyContent: 'center'}}>
+
           <label>
             Rating:
             <input
@@ -75,8 +74,9 @@ function ReviewForm(props){
             />
           </label>
           <button style={linkStyles} type="submit">Save</button>
+                </section>
         </form>
-      {/* </section> */}
+
         </>
     )
 

@@ -1,6 +1,7 @@
 import ReviewForm from './ReviewForm'
 import {uid} from 'react-uid';
 import { Redirect, useHistory, NavLink, Route } from 'react-router-dom'
+// import Rating from '@mui/material/Rating';
 
 const linkStyles = {
     width: "85px",
@@ -29,17 +30,28 @@ function GymContainer(props){
     //     //   }}
     //     // />
     // }
+
     
 
 const review = join.map(rev => <p key={uid(rev)}><li><em>{rev.review}</em></li></p>)
+// const stars = average_rating.toFixed(2)
 
     return(
     <div className="centered">
         <section className="cards">
+        {/* <NavLink style={linkStyles} to={{ 
+                    pathname: '/new_gym',
+                    state: { gymId: {gym_id}, userId: {user_id}},
+                }}
+                >Add Gym</NavLink>  */}
+
+        
         
             <article key={uid(name)} id="card" className="card">
                 <h3 style={gymName}>{name}</h3>
+                {/* {average_rating.toFixed(2) * 20}% */}
                 {average_rating}
+                {/* <Rating defaultValue={stars} precision={0.0625} readOnly /> */}
                 <strong className="art">{art} Focused</strong>
                 <p>{address}</p>
                 <a className='gym' href={link}>Website Link</a>

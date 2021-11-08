@@ -1,7 +1,17 @@
+import { Redirect, useHistory, NavLink, Route } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import GymContainer from './GymContainer'
 import GymFilter from './GymFilter'
 import {uid} from 'react-uid';
+
+const linkStyles = {
+    width: "85px",
+    padding: "2px",
+    color: "black",
+    // backgroundColor:"transparent",
+    transition: "background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out" 
+
+  };
 
 function Train (props){
     const user_id = props
@@ -23,9 +33,13 @@ function Train (props){
 
     return(
         <>
-        <h1>NYC Based Gyms</h1>
+        <h1>Explore Library or {<NavLink style={linkStyles}  to= '/new_gym'>Add New Gym</NavLink> }</h1>
+        {/* <h1>{<NavLink style={linkStyles}  to= '/new_gym'>Add New Gym</NavLink> }</h1> */}
         
-        <GymFilter filter={filter} setFilter={setFilter} />
+
+        
+        <GymFilter filter={filter} setFilter={setFilter}  />
+        {/* {<NavLink style={linkStyles}  to= '/new_gym'>Add New Gym</NavLink> } */}
 
         {filteredList.map(g => (
             <GymContainer
