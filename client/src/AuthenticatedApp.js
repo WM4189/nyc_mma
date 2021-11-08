@@ -3,6 +3,7 @@ import Home from './components/Home'
 import Learn from './components/Learn'
 import Train from './components/Train'
 import Profile from './components/Profile'
+import ReviewForm from './components/ReviewForm'
 import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
 
 
@@ -38,6 +39,7 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
         }
       })
   }
+
   return (
     <div className="App">
       <nav>
@@ -86,7 +88,12 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
         <Route path='/thai'>
           <Thai />
         </Route>
-        {/* <Redirect to="/home" /> */}
+
+        <Route path='/reviews'>
+          <ReviewForm user_id={currentUser.id} />
+        </Route>
+
+        <Redirect to="/home" />
       </Switch>
       
     </div>

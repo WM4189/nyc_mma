@@ -1,7 +1,30 @@
 import ReviewForm from './ReviewForm'
 import {uid} from 'react-uid';
+import { Redirect, useHistory } from 'react-router-dom'
+
+// const linkStyles = {
+//     // display: "inline-block",
+//     width: "85px",
+//     padding: "2px",
+//     // margin: "0 6px 6px",
+//     background: "transparent",
+//     textDecoration: "none",
+//     color: "black",
+//   };
+
+const linkStyles = {
+    // display: "inline-block",
+    width: "85px",
+    padding: "2px",
+    // margin: "0 6px 6px",
+    // background: "transparent",
+    // textDecoration: "none",
+    // color: "black",
+  };
+
 
 function GymContainer(props){
+    const history = useHistory();
     const {name, address, average_rating, link, art, join} = props
 
    const gymName = {
@@ -23,6 +46,8 @@ const review = join.map(rev => <p key={uid(rev)}><li><em>{rev.review}</em></li><
                 <br />
                 <strong><p>Reviews:</p></strong>
                             {review}
+                            {/* <ReviewForm /> */}
+                <button style={linkStyles} onClick={() => history.push('/reviews')}>Add Review </button>
             </article>
         </section>
     </div>
