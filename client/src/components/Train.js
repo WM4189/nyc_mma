@@ -25,6 +25,7 @@ function Train (props){
     .then(gyms => setGyms(gyms))
     },[setGyms])
 
+
     const filteredList = 
     gyms.filter(dojo => dojo.name.toLowerCase().includes(filter.toLowerCase()) || dojo.art.toLowerCase().includes(filter.toLowerCase()))
     .sort((dojo1, dojo2) => {
@@ -52,6 +53,7 @@ function Train (props){
                 art={g.art}
                 join={g.user_gyms}
                 user_id={user_id}
+                total_reviews={g.user_gyms.length}
             />
         ))}
         </>

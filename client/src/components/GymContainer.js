@@ -1,7 +1,7 @@
 import ReviewForm from './ReviewForm'
 import {uid} from 'react-uid';
 import { Redirect, useHistory, NavLink, Route } from 'react-router-dom'
-// import Rating from '@mui/material/Rating';
+import Rating from '@mui/material/Rating';
 
 const linkStyles = {
     width: "85px",
@@ -14,7 +14,7 @@ const linkStyles = {
 
 function GymContainer(props){
     const history = useHistory();
-    const {name, address, average_rating, link, art, join, gym_id, user_id} = props
+    const {name, address, total_reviews, average_rating, link, art, join, gym_id, user_id} = props
 
     // console.log(user_id.user_id.id)
     // console.log(gym_id)
@@ -34,7 +34,8 @@ function GymContainer(props){
     
 
 const review = join.map(rev => <p key={uid(rev)}><li><em>{rev.review}</em></li></p>)
-// const stars = average_rating.toFixed(2)
+// const stars = average_rating ? average_rating.toFixed(2) : .1
+const stars = average_rating 
 
     return(
     <div className="centered">
@@ -50,9 +51,16 @@ const review = join.map(rev => <p key={uid(rev)}><li><em>{rev.review}</em></li><
             <article key={uid(name)} id="card" className="card">
                 <h3 style={gymName}>{name}</h3>
                 {/* {average_rating.toFixed(2) * 20}% */}
-                {average_rating}
-                {/* <Rating defaultValue={stars} precision={0.0625} readOnly /> */}
+                {/* {average_rating} */}
                 <strong className="art">{art} Focused</strong>
+                <br />
+                
+                {/* {stars} <Rating defaultValue={stars} precision={0.0625} readOnly /> {total_reviews} Reviews */}
+                {stars ? stars.toFixed(2) : "0"}/5 <Rating defaultValue={stars} precision={0.1} readOnly /> {total_reviews} Reviews
+
+                {/* <Rating defaultValue={stars} precision={0.0625} readOnly />  */}
+
+
                 <p>{address}</p>
                 <a className='gym' href={link}>Website Link</a>
                 <br />
