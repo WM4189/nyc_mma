@@ -3,6 +3,7 @@
 border: none
 } */
 
+
 textarea {
 	width: 80%;
 	height: 185px;
@@ -19,6 +20,20 @@ input:focus {
 	outline: none;
 }
 
+.signAuthForm {
+  display:flex;
+  align-items: center;
+  justify-content: center;  
+  margin: 8em auto;
+  width: 380px;
+  max-width:380;
+  background: rgba(181, 181, 181, 0.92);
+  text-align:center;
+  border: 2px solid #40413f;
+  box-shadow: 5px 5px 2.5px grey;
+  border-radius: 20px;
+}
+
 
 .authForm input {
   width: 16rem;
@@ -26,11 +41,25 @@ input:focus {
   max-width: 85%
 }
 
-
-
 .authForm label{
   display: inline-block;
   width: 6rem;
+  vertical-align: top;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.signAuthForm label {
+  display: inline-block;
+  width: 6rem;
+  vertical-align: top;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.signAuthForm input {
+  display: inline-block;
+  width: 16rem;
   vertical-align: top;
   padding: 0.5rem;
   text-align: center;

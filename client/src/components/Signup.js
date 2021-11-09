@@ -49,7 +49,7 @@ function Signup({ setCurrentUser }) {
       })
   }
   return (
-    <div className="authForm">
+    <div className="signAuthForm">
       <form onSubmit={handleSubmit}>
         <h1>Create an Account</h1>
         <p>
