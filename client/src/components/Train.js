@@ -6,12 +6,19 @@ import {uid} from 'react-uid';
 
 const linkStyles = {
     width: "85px",
-    padding: "2px",
+    padding: "4px",
     color: "black",
-    // backgroundColor:"transparent",
-    transition: "background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out" 
-
+    backgroundColor:"gray",
+    borderRadius: "5px",
+    boxShadow: "10px",
+    textShadow: "2.5px 2.5px 1.5px grey",
+    textDecoration: "link",
+    transition: "background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out",
+    transform: "translateY(-3px)"
   };
+
+
+
 
 function Train (props){
     const user_id = props
@@ -34,7 +41,7 @@ function Train (props){
 
     return(
         <>
-        <h1>Explore Library or {<NavLink style={linkStyles}  to= '/new_gym'>Add New Gym</NavLink> }</h1>
+        <h1 id="addGym">Explore Library or {<NavLink style={linkStyles} to= '/new_gym'>Add New Gym</NavLink> }</h1>
         {/* <h1>{<NavLink style={linkStyles}  to= '/new_gym'>Add New Gym</NavLink> }</h1> */}
         
 

@@ -111,6 +111,7 @@ a, button:hover {
   background-color: #757674;
   border: 2px solid #616161;
   box-shadow: 10px 10px 5px grey;
+  cursor: pointer
 }
 
 a:hover {

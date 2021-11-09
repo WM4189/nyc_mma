@@ -1,4 +1,5 @@
 import ReviewForm from './ReviewForm'
+import {useState} from 'react'
 import {uid} from 'react-uid';
 import { Redirect, useHistory, NavLink, Route } from 'react-router-dom'
 import Rating from '@mui/material/Rating';
@@ -7,6 +8,7 @@ const linkStyles = {
     width: "85px",
     padding: "2px",
     color: "black",
+    borderRadius: "5px",
     // backgroundColor:"gray",
     transition: "background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out" 
 
@@ -15,6 +17,7 @@ const linkStyles = {
 function GymContainer(props){
     const history = useHistory();
     const {name, address, total_reviews, average_rating, link, art, join, gym_id, user_id} = props
+    const [toggle, setToggle] = useState(false)
 
     // console.log(user_id.user_id.id)
     // console.log(gym_id)
@@ -56,7 +59,7 @@ const stars = average_rating
                 <br />
                 
                 {/* {stars} <Rating defaultValue={stars} precision={0.0625} readOnly /> {total_reviews} Reviews */}
-                {stars ? stars.toFixed(2) : "0"}/5 <Rating defaultValue={stars} precision={0.1} readOnly /> {total_reviews} Reviews
+                {stars ? stars.toFixed(2) : "0"}/5 <Rating defaultValue={stars} precision={0.1} readOnly /> {total_reviews} {total_reviews > 1 ? "Reviews" : "Review"}
 
                 {/* <Rating defaultValue={stars} precision={0.0625} readOnly />  */}
 
