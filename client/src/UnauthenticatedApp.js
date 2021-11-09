@@ -21,14 +21,15 @@ function UnauthenticatedApp({ setCurrentUser }) {
             loop
             muted
             style={{
-              position: 'absolute',
+              position: 'fixed',
               width: "100%",
               left: "50%",
               top: "50%",
-              height: "100%",
+              height: "115%",
               objectFit: "cover",
               transform: "translate(-50%, -50%)",
-              zIndex: "-1"
+              zIndex: "-1",
+              overflow: "hidden"
             }}
             >
               <source src={Video} type="video/mp4" />

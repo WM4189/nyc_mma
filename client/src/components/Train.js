@@ -21,11 +21,10 @@ const linkStyles = {
 
 
 function Train (props){
-    const user_id = props
+    const {user_id, currentUser } = props
     const [filter, setFilter] = useState("")
     const [gyms, setGyms] = useState([]);
     
-
     useEffect(() => {
     fetch("/gyms")
     .then(res => res.json())

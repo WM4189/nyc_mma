@@ -5,6 +5,7 @@ border: none
 
 
 textarea {
+  border-radius: 10px;
 	width: 80%;
 	height: 185px;
 	resize: none;
@@ -34,6 +35,13 @@ input:focus {
   border-radius: 20px;
 }
 
+#gymForm input {
+  /* position: fixed; */
+  display: inline-block;
+  width: 13rem;
+  padding: 0.25rem;
+  max-width: 70%
+}
 
 .authForm input {
   width: 16rem;

@@ -3,11 +3,13 @@ import { useHistory, useLocation, Redirect } from "react-router-dom";
 
 
 const linkStyles = {
-    // display: "inline-block",
-    width: "85px",
-    padding: "2px",
+    display: "inline-block",
+    width: "100px",
+    fontSize: "20px",
+    fontWeight: "bold",
+    // padding: "2px",
     // margin: "0 6px 6px",
-    // background: "transparent",
+    background: "gray",
     // textDecoration: "none",
     // color: "black",  
   };
@@ -54,8 +56,9 @@ function GymForm(props){
 
     return (
         <>
-        <h1>Add New Gym</h1>
-        <form onSubmit={handleSubmit}>
+       
+        <form id="gymForm" onSubmit={handleSubmit}>
+        <h1><button style={linkStyles} type="submit">Save Gym</button></h1>
             <section style={{display: 'flex', justifyContent: 'center'}}>
           <label>
            Name:
@@ -93,7 +96,6 @@ function GymForm(props){
               onChange={(e) => setArt(e.target.value)}
             />
           </label>
-          <button style={linkStyles} type="submit">Save</button>
           </section>
         </form>
 

@@ -25,6 +25,7 @@ function GymContainer(props){
     textDecoration: "underline"
     }
 
+
     // function redirect(name, user_id, gym_id){
     //     // <Redirect
     //     // to={{
@@ -41,17 +42,11 @@ const review = join.map(rev => <p key={uid(rev)}><li><em>{rev.review}</em></li><
 const stars = average_rating 
 
     return(
-    <div className="centered">
-        <section className="cards">
-        {/* <NavLink style={linkStyles} to={{ 
-                    pathname: '/new_gym',
-                    state: { gymId: {gym_id}, userId: {user_id}},
-                }}
-                >Add Gym</NavLink>  */}
-
-        
-        
-            <article key={uid(name)} id="card" className="card">
+    <div id="contain">
+        <div className="flip-card">
+            <div className="flip-card-inner">
+                <div className="flip-card-front">
+                <article key={uid(name)} id="card" className="card">
                 <h3 style={gymName}>{name}</h3>
                 {/* {average_rating.toFixed(2) * 20}% */}
                 {/* {average_rating} */}
@@ -59,16 +54,28 @@ const stars = average_rating
                 <br />
                 
                 {/* {stars} <Rating defaultValue={stars} precision={0.0625} readOnly /> {total_reviews} Reviews */}
-                {stars ? stars.toFixed(2) : "0"}/5 <Rating defaultValue={stars} precision={0.1} readOnly /> {total_reviews} {total_reviews > 1 ? "Reviews" : "Review"}
+                <div id='stars'>
+                {stars ? stars.toFixed(2) : "0"}/5 <Rating defaultValue={stars} precision={0.1} readOnly /> {total_reviews} {total_reviews === 1 ? "Review" : "Reviews"}
+                </div>
 
                 {/* <Rating defaultValue={stars} precision={0.0625} readOnly />  */}
 
 
                 <p>{address}</p>
-                <a className='gym' href={link}>Website Link</a>
                 <br />
-                <strong><p>Reviews:</p></strong>
+
+                
+                {/* <strong>Flip card for {total_reviews === 1 ? "Review" : "Reviews"} </strong> ➜ */}
+                <strong>Flip to Comment </strong> ➜
+
+            </article>                </div>
+
+                <div style={{color: "black"}} className="flip-card-back">
+                <strong><a className='gym' href={link}>Website Link</a></strong>
+                <br />
+                <strong ><p>Reviews:</p></strong>
                             {review}
+                            
                             {/* <ReviewForm gym_name={name} user_id={user_id} gym_id={gym_id} /> */}
                 {/* <button style={linkStyles} onClick={(name, user_id, gym_id) => history.push('/reviews')}>Add Review </button> */}
                 {/* <Redirect to={{ pathname: "/reviews", state: { gym_id: gym_id }, { user_id: user_id}}}/>Add Review  */}
@@ -76,10 +83,12 @@ const stars = average_rating
                     pathname: '/reviews',
                     state: { gymId: {gym_id}, userId: {user_id}},
                 }}
-                >Add Review</NavLink>                
-            </article>
-        </section>
+                >Add Review</NavLink>              
+                </div>
+            </div>
+        </div>
     </div>
+   
     )
 }
 
