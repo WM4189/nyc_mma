@@ -1,5 +1,7 @@
 import {useState} from "react";
 import { useHistory, useLocation, Redirect } from "react-router-dom";
+import Rating from '@mui/material/Rating';
+
 
 
 const linkStyles = {
@@ -51,11 +53,21 @@ function ReviewForm(props){
 
     return(
         <>
+         
         <h1>Add New Review</h1>
         <form onSubmit={handleSubmit}>
-                  <section style={{display: 'flex', justifyContent: 'center'}}>
+                  <section >
+                  Rating:
+                  <Rating 
+           defaultValue={0} 
+           precision={0.5}
+           id="rating"
+           name="rating"
+              value={rating}
+              onChange={(e) => setRating(e.target.value)}
+           /> 
 
-          <label>
+          {/* <label>
             Rating:
             <input
               type="text"
@@ -63,16 +75,39 @@ function ReviewForm(props){
               value={rating}
               onChange={(e) => setRating(e.target.value)}
             />
-          </label>
-          <label>
+          </label> */}
+
+{/* 
+           <label>
+            Rating:
+         
+
+            <select
+              name="rating"
+              value={rating}
+              onChange={(e) => setRating(e.target.value)}
+              id="rating"
+            >
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            </label> */}
+          <div>
+          {/* <label id="review"> */}
             Review:
-            <input
+            <textarea
               type="text"
               name="review"
               value={review}
               onChange={(e) => setReview(e.target.value)}
+              id="review"
             />
-          </label>
+          {/* </label> */}
+          </div> 
           <button style={linkStyles} type="submit">Save</button>
                 </section>
         </form>

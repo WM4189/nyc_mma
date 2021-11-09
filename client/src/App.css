@@ -1,16 +1,38 @@
 
-form input, form textarea {
-  width: 16rem;
-  padding: 0.5rem;
-  max-width: 85%;
+
+textarea {
+	width: 80%;
+	height: 185px;
+	resize: none;
+	/* margin-left: 10%; */
+	font-size: 18px;
 }
 
-form label {
+textarea:focus {
+	outline: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+
+.authForm input {
+  width: 16rem;
+  padding: 0.5rem;
+  max-width: 85%
+}
+
+
+
+.authForm label{
   display: inline-block;
   width: 6rem;
   vertical-align: top;
   padding: 0.5rem;
+  text-align: center;
 }
+
 
 .App {
   text-align: center;
