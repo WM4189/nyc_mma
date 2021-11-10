@@ -1,4 +1,5 @@
 import { useHistory, NavLink } from "react-router-dom";
+import {useState, useEffect} from "react";
 import React, { Component } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
@@ -30,10 +31,25 @@ const linkStyles = {
   };
 
 
-class Jkd extends Component {
-    render(){
-        const {jkd, setJkd} = this.props
+// class Bjj extends Component {
+//     render(){
+        // const {bjj, setBjj} = this.props
+        // const bj = bjj.bjj
         // console.log(bjj)
+        function Jkd (){
+            const [jkd, setJkd] = useState([])
+
+            useEffect(() => {
+                fetch("/arts")
+                  .then(res => res.json())
+                  .then(jkd => {
+                    //   console.log(bjj[0].bjj)
+                    setJkd(jkd[0].jkd)
+                  })
+              }, [])
+
+              console.log(jkd)
+
         function handleSubmit(event, { data }) {
             // event.preventDefault();
             
@@ -47,8 +63,8 @@ class Jkd extends Component {
                 "jkd": data
                 })
             })
-            .then(r => r.json())
-            .then(jkd => setJkd(jkd))
+            // .then(r => r.json())
+            // .then(bjj => setBjj(bjj))
             
         }
 
@@ -63,21 +79,21 @@ class Jkd extends Component {
         </nav>
         
         <form onSubmit={handleSubmit}>
-            <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
+            {/* <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
                 <textarea
                 id="art"
-            value={jkd}
-            onChange={(e) => setJkd(e.target.value)}
-            ></textarea>
+                placeholder={bjj}
+            value={bjj}
+            onChange={(e) => setBjj(e.target.value)}
+            >{bjj}</textarea> */}
             <section >
             <label>
                 
-       
             </label>
 
             <CKEditor
                     editor={ ClassicEditor }
-                    data="History..."
+                    data={jkd}
                     onReady={ editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log( 'Editor is ready to use!', editor );
@@ -99,6 +115,6 @@ class Jkd extends Component {
                 </>
     )
 }
-}
+// }
 
 export default Jkd

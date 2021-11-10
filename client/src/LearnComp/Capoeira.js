@@ -1,4 +1,5 @@
 import { useHistory, NavLink } from "react-router-dom";
+import {useState, useEffect} from "react";
 import React, { Component } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
@@ -30,10 +31,25 @@ const linkStyles = {
   };
 
 
-class Capoeira extends Component {
-    render(){
-        const {cap, setCap} = this.props
+// class Bjj extends Component {
+//     render(){
+        // const {bjj, setBjj} = this.props
+        // const bj = bjj.bjj
         // console.log(bjj)
+        function Capoeira (){
+            const [cap, setCap] = useState([])
+
+            useEffect(() => {
+                fetch("/arts")
+                  .then(res => res.json())
+                  .then(cap => {
+                    //   console.log(bjj[0].bjj)
+                    setCap(cap[0].capoeira)
+                  })
+              }, [])
+
+              console.log(cap)
+
         function handleSubmit(event, { data }) {
             // event.preventDefault();
             
@@ -47,8 +63,8 @@ class Capoeira extends Component {
                 "capoeira": data
                 })
             })
-            .then(r => r.json())
-            .then(cap => setCap(cap))
+            // .then(r => r.json())
+            // .then(bjj => setBjj(bjj))
             
         }
 
@@ -63,21 +79,21 @@ class Capoeira extends Component {
         </nav>
         
         <form onSubmit={handleSubmit}>
-            <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
+            {/* <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
                 <textarea
                 id="art"
-            value={cap}
-            onChange={(e) => setCap(e.target.value)}
-            ></textarea>
+                placeholder={bjj}
+            value={bjj}
+            onChange={(e) => setBjj(e.target.value)}
+            >{bjj}</textarea> */}
             <section >
             <label>
                 
-       
             </label>
 
             <CKEditor
                     editor={ ClassicEditor }
-                    data="History..."
+                    data={cap}
                     onReady={ editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log( 'Editor is ready to use!', editor );
@@ -99,6 +115,6 @@ class Capoeira extends Component {
                 </>
     )
 }
-}
+// }
 
 export default Capoeira

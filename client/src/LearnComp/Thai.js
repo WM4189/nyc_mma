@@ -1,4 +1,5 @@
 import { useHistory, NavLink } from "react-router-dom";
+import {useState, useEffect} from "react";
 import React, { Component } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
@@ -30,10 +31,25 @@ const linkStyles = {
   };
 
 
-class Thai extends Component {
-    render(){
-        const {thai, setThai} = this.props
+// class Bjj extends Component {
+//     render(){
+        // const {bjj, setBjj} = this.props
+        // const bj = bjj.bjj
         // console.log(bjj)
+        function Thai (){
+            const [thai, setThai] = useState([])
+
+            useEffect(() => {
+                fetch("/arts")
+                  .then(res => res.json())
+                  .then(thai => {
+                    //   console.log(bjj[0].bjj)
+                    setThai(thai[0].thai)
+                  })
+              }, [])
+
+              console.log(thai)
+
         function handleSubmit(event, { data }) {
             // event.preventDefault();
             
@@ -47,8 +63,8 @@ class Thai extends Component {
                 "thai": data
                 })
             })
-            .then(r => r.json())
-            .then(thai => setThai(thai))
+            // .then(r => r.json())
+            // .then(bjj => setBjj(bjj))
             
         }
 
@@ -63,21 +79,21 @@ class Thai extends Component {
         </nav>
         
         <form onSubmit={handleSubmit}>
-            <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
+            {/* <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
                 <textarea
                 id="art"
-            value={thai}
-            onChange={(e) => setThai(e.target.value)}
-            ></textarea>
+                placeholder={bjj}
+            value={bjj}
+            onChange={(e) => setBjj(e.target.value)}
+            >{bjj}</textarea> */}
             <section >
             <label>
                 
-       
             </label>
 
             <CKEditor
                     editor={ ClassicEditor }
-                    data="History..."
+                    data={thai}
                     onReady={ editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log( 'Editor is ready to use!', editor );
@@ -99,6 +115,6 @@ class Thai extends Component {
                 </>
     )
 }
-}
+// }
 
 export default Thai

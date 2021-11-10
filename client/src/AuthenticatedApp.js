@@ -35,10 +35,10 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
 const [jou, setJou] = useState(currentUser.journal)
 const [arts, setArts] = useState([])
 // const [bjj, setBjj] = useState("")
-const [box, setBox] = useState("")
-const [cap, setCap] = useState("")
-const [jkd, setJkd] = useState("")
-const [thai, setThai] = useState("")
+// const [box, setBox] = useState("")
+// const [cap, setCap] = useState("")
+// const [jkd, setJkd] = useState("")
+// const [thai, setThai] = useState("")
 
   const handleLogout = () => {
     fetch(`/logout`, {
@@ -93,24 +93,23 @@ const [thai, setThai] = useState("")
         </Route>
 
         <Route path='/bjj'>
-          {/* <Bjj bjj={bjj} setBjj={setBjj} /> */}
           <Bjj  />
         </Route>
 
         <Route path='/boxing'>
-          <Boxing box={box} setBox={setBox} />
+          <Boxing  />
         </Route>
 
         <Route path='/capoeira'>
-          <Capoeira cap={cap} setCap={setCap} />
+          <Capoeira  />
         </Route>
 
         <Route path='/jkd'>
-          <Jkd jkd={jkd} setJk={setJkd} />
+          <Jkd />
         </Route>
 
         <Route path='/thai'>
-          <Thai thai={thai} setThai={setThai}/>
+          <Thai />
         </Route>
 
         <Route path='/reviews'>
