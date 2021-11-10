@@ -14,6 +14,7 @@ puts "Deleting old data..."
 Gym.destroy_all
 User.destroy_all
 UserGym.destroy_all
+Art.destroy_all
 
 puts "🌱 Seeding Gyms..."
 andersons = Gym.create(name: "Anderson's Martial Arts Academy", address: "412 Broadway #2, New York, NY, 10013", link: "https://www.andersonsmartialarts.com/", art: "JKD")
@@ -30,7 +31,7 @@ evolution = Gym.create(name: "Evolution Muay Thai", address: "109 W 25th St, New
 
 
 puts "🌱 Seeding Users..."
-wm = User.create(username: "Willson", email:"wm@email.com", password: "password", journal: "First Entry")
+wm = User.create(username: "Willson", email:"wm@email.com", password: "password", journal: "Training Journal Entries!!!!!!")
 jake = User.create(username: "Jake", email:"jake@email.com", password: "password")
 luie = User.create(username: "Luie", email:"sweet_lu@email.com", password: "password")
 jackle = User.create(username: "Jackle", email:"cactus_jack@email.com", password: "password")
@@ -65,5 +66,6 @@ kings.average_gym_rating
 ultimate.average_gym_rating
 evolution.average_gym_rating
 
+Art.create(bjj: "Bjj History", boxing: "Boxing History", capoeira: "Capp History", jkd: "JKD History", thai: "Thai History")
 
 puts "✅ Done seeding!"

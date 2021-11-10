@@ -33,6 +33,11 @@ const linkStyles = {
 
 function AuthenticatedApp({ currentUser, setCurrentUser }) {
 const [jou, setJou] = useState(currentUser.journal)
+const [bjj, setBjj] = useState("")
+const [box, setBox] = useState("")
+const [cap, setCap] = useState("")
+const [jkd, setJkd] = useState("")
+const [thai, setThai] = useState("")
 
   const handleLogout = () => {
     fetch(`/logout`, {
@@ -77,23 +82,23 @@ const [jou, setJou] = useState(currentUser.journal)
         </Route>
 
         <Route path='/bjj'>
-          <Bjj />
+          <Bjj bjj={bjj} setBjj={setBjj} />
         </Route>
 
         <Route path='/boxing'>
-          <Boxing />
+          <Boxing box={box} setBox={setBox} />
         </Route>
 
         <Route path='/capoeira'>
-          <Capoeira />
+          <Capoeira cap={cap} setCap={setCap} />
         </Route>
 
         <Route path='/jkd'>
-          <Jkd />
+          <Jkd jkd={jkd} setJk={setJkd} />
         </Route>
 
         <Route path='/thai'>
-          <Thai />
+          <Thai thai={thai} setThai={setThai}/>
         </Route>
 
         <Route path='/reviews'>

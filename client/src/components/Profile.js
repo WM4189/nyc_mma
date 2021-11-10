@@ -20,10 +20,11 @@ class Profile extends Component {
     render(){
         const {id, username, email, journal} = this.props.currentUser;
         const {jou, setJou} = this.props
-        console.log(this.props.currentUser)
+        // console.log(this.props.currentUser)
 
-        function handleSubmit(event) {
-            event.preventDefault();
+        function handleSubmit(event, { data }) {
+            // event.preventDefault();
+            console.log(data)
             fetch(`/users/${id}`, {
                 method: 'PATCH',
                 credentials: 'include',
@@ -31,27 +32,25 @@ class Profile extends Component {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                "journal": jou
+                "journal": data
                 })
             })
             .then(r => r.json())
-            .then(data => console.log(data))
+            .then(d => setJou(d))
             
         }
 
         return(
             <div>
             <h1>{username}'s Training Journal</h1>
-            <form id="gymForm" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
             <h1><button style={linkStyles} type="submit">Save Entry</button></h1>
-            <section style={{display: 'flex', justifyContent: 'center'}}>
+            <section >
             <label>
-            <textarea
-            type="text"
-            name="rating"
+            {/* <textarea
             value={jou}
             onChange={(e) => setJou(e.target.value)}
-            />
+            /> */}
             </label>
 
             <CKEditor
@@ -64,6 +63,7 @@ class Profile extends Component {
                     onChange={ ( event, editor ) => {
                         const data = editor.getData();
                         console.log( { event, editor, data } );
+                        handleSubmit(data, { data });
                     } }
                     onBlur={ ( event, editor ) => {
                         console.log( 'Blur.', editor );

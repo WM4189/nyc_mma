@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :arts
   resources :gyms
   resources :users
   resources :user_gyms

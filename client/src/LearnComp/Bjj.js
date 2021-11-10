@@ -1,18 +1,23 @@
 import { useHistory, NavLink } from "react-router-dom";
+import React, { Component } from 'react';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
-// const linkStyles = {
-//     fontSize: ".85em",
-//     display: "inline-block",
-//     borderRadius: "10px",
-//     width: "50",
-//     padding: "5px",
-//     margin: "0 6px 6px",
-//     background: "transparent",
-//     textDecoration: "none",
-//     color: "black",
-//     backgroundColor:"black",
-//   transition: "background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out" 
-//   };
+
+const otherStyles = {
+    display: "inline-block",
+    width: "100px",
+    fontSize: "15px",
+    fontWeight: "bold",
+    // padding: "2px",
+    // margin: "0 6px 6px",
+    background: "gray",
+    justifyContent: 'center',
+    padding: 'none',
+    // textDecoration: "none",
+
+  };
+
 
 const linkStyles = {
     display: "inline-block",
@@ -25,8 +30,27 @@ const linkStyles = {
   };
 
 
-function Bjj (){
-const history = useHistory();
+class Bjj extends Component {
+    render(){
+        const {bjj, setBjj} = this.props
+
+        function handleSubmit(event, { data }) {
+            // event.preventDefault();
+            fetch(`/arts/1`, {
+                method: 'PATCH',
+                credentials: 'include',
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                "bjj": data
+                })
+            })
+            .then(r => r.json())
+            .then(d => setBjj(d))
+            
+        }
+
     return(
         <>
         <nav>
@@ -36,12 +60,42 @@ const history = useHistory();
         <NavLink to="/jkd" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
         <NavLink to="/thai" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
         </nav>
-        {/* <div id="art">
-        Explore Another Art
-        <button style={linkStyles} onClick={() => history.goBack()}></button>
-        </div> */}
-        </>
+
+        <form onSubmit={handleSubmit}>
+            <h1><button style={otherStyles} type="submit">Save Entry</button></h1>
+            <section >
+            <label>
+                <textarea>{bjj}</textarea>
+            {/* <textarea
+            value={bjj}
+            onChange={(e) => setBjj(e.target.value)}
+            /> */}
+            </label>
+
+            <CKEditor
+                    editor={ ClassicEditor }
+                    data="Journal Away..."
+                    onReady={ editor => {
+                        // You can store the "editor" and use when it is needed.
+                        console.log( 'Editor is ready to use!', editor );
+                    } }
+                    onChange={ ( event, editor ) => {
+                        const data = editor.getData();
+                        console.log( { event, editor, data } );
+                        handleSubmit(data, { data });
+                    } }
+                    onBlur={ ( event, editor ) => {
+                        console.log( 'Blur.', editor );
+                    } }
+                    onFocus={ ( event, editor ) => {
+                        console.log( 'Focus.', editor );
+                    } }
+                />
+                </section>
+                </form>
+                </>
     )
+}
 }
 
 export default Bjj
