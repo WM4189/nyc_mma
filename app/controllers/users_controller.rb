@@ -3,6 +3,11 @@ class UsersController < ApplicationController
 
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
+    def update
+        @current_user.update!(journal_params)
+        render json: @current_user, status: :accepted
+    end
+
     def create
         user = User.create!(user_params)
         session[:user_id] = user.id
@@ -18,6 +23,10 @@ class UsersController < ApplicationController
     end
 
     private
+
+    def journal_params
+        params.permit(:journal)
+    end
 
     def user_params
         params.permit(:username, :password, :email)

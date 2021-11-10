@@ -6,6 +6,7 @@ import Profile from './components/Profile'
 import ReviewForm from './components/ReviewForm'
 import GymForm from './components/GymForm'
 
+import {useState} from "react";
 import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
 
 
@@ -31,6 +32,8 @@ const linkStyles = {
 
 
 function AuthenticatedApp({ currentUser, setCurrentUser }) {
+const [jou, setJou] = useState(currentUser.journal)
+
   const handleLogout = () => {
     fetch(`/logout`, {
       method: 'DELETE'
@@ -66,7 +69,7 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
         </Route>
 
         <Route path="/profile">
-        <Profile currentUser={currentUser} />
+        <Profile jou={jou} setJou={setJou} currentUser={currentUser} />
         </Route>
 
         <Route exact path="/home">

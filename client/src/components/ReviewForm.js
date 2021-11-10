@@ -21,13 +21,13 @@ function ReviewForm(props){
     const { gymId, userId } = location.state
 
     // console.log(gymId.gym_id)
-    // console.log(userId.user_id.user_id.id)
+    // console.log(userId.user_id.id)
 
-    const [rating, setRating] = useState("");
+    const [rating, setRating] = useState(0);
     const [review, setReview] = useState("");
 
     const gId = gymId.gym_id
-    const uId = userId.user_id.user_id.id
+    const uId = userId.user_id.id
 
     // console.log(gId)
 

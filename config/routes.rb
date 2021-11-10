@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :user_gyms
 
+  patch "/profile", to: "users#update" 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
 

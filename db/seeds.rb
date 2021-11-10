@@ -30,7 +30,7 @@ evolution = Gym.create(name: "Evolution Muay Thai", address: "109 W 25th St, New
 
 
 puts "🌱 Seeding Users..."
-wm = User.create(username: "Willson", email:"wm@email.com", password: "password")
+wm = User.create(username: "Willson", email:"wm@email.com", password: "password", journal: "First Entry")
 jake = User.create(username: "Jake", email:"jake@email.com", password: "password")
 luie = User.create(username: "Luie", email:"sweet_lu@email.com", password: "password")
 jackle = User.create(username: "Jackle", email:"cactus_jack@email.com", password: "password")
