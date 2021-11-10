@@ -32,7 +32,6 @@ const linkStyles = {
 
 
 function AuthenticatedApp({ currentUser, setCurrentUser }) {
-const [jou, setJou] = useState(currentUser.journal)
 const [arts, setArts] = useState([])
 // const [bjj, setBjj] = useState("")
 // const [box, setBox] = useState("")
@@ -85,7 +84,7 @@ const [arts, setArts] = useState([])
         </Route>
 
         <Route path="/profile">
-        <Profile jou={jou} setJou={setJou} currentUser={currentUser} />
+        <Profile currentUser={currentUser} />
         </Route>
 
         <Route exact path="/home">

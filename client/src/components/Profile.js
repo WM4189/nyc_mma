@@ -1,8 +1,11 @@
+import { useHistory, NavLink } from "react-router-dom";
+import {useState, useEffect} from "react";
 import React, { Component } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
-const linkStyles = {
+
+const otherStyles = {
     display: "inline-block",
     width: "100px",
     fontSize: "15px",
@@ -16,15 +19,43 @@ const linkStyles = {
 
   };
 
-class Profile extends Component {
-    render(){
-        const {id, username, email, journal} = this.props.currentUser;
-        const {jou, setJou} = this.props
-        // console.log(this.props.currentUser)
+
+const linkStyles = {
+    display: "inline-block",
+    width: "100px",
+    padding: "5px",
+    margin: "0 6px 6px",
+    background: "black",
+    textDecoration: "none",
+    color: "white",
+  };
+
+
+// class Bjj extends Component {
+//     render(){
+        // const {bjj, setBjj} = this.props
+        // const bj = bjj.bjj
+        // console.log(bjj)
+        function Profile (props){
+            const {id, username, email, journal} = props.currentUser
+            const [jou, setJou] = useState([])
+            // console.log(props.currentUser)
+
+            useEffect(() => {
+                fetch(`/users/${id}`)
+                  .then(res => res.json())
+                  .then(jou => {
+                      setJou(jou.journal)
+                    //   console.log(jou.journal)
+                    
+                  })
+              }, [])
+
+            // console.log(jou)
 
         function handleSubmit(event, { data }) {
             // event.preventDefault();
-            console.log(data)
+            
             fetch(`/users/${id}`, {
                 method: 'PATCH',
                 credentials: 'include',
@@ -35,30 +66,31 @@ class Profile extends Component {
                 "journal": data
                 })
             })
-            .then(r => r.json())
-            .then(jou => setJou(jou))
+            // .then(r => r.json())
+            // .then(bjj => setBjj(bjj))
             
         }
 
-        return(
-            <div>
-            <h1>{username}'s Training Journal</h1>
-            <form onSubmit={handleSubmit}>
-            <h1><button style={linkStyles} type="submit">Save Entry</button></h1>
+    return(
+        <>
+        <h1>{username}'s Training Journal</h1>
+        
+        <form onSubmit={handleSubmit}>
+            {/* <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
+                <textarea
+                id="art"
+                placeholder={bjj}
+            value={bjj}
+            onChange={(e) => setBjj(e.target.value)}
+            >{bjj}</textarea> */}
             <section >
             <label>
-            <textarea
-             id="art"
-            value={jou}
-            onChange={(e) => setJou(e.target.value)}
-            />
+                
             </label>
-
-            {/* {jou} */}
 
             <CKEditor
                     editor={ ClassicEditor }
-                    data="Journal Away..."
+                    data={jou}
                     onReady={ editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log( 'Editor is ready to use!', editor );
@@ -77,9 +109,9 @@ class Profile extends Component {
                 />
                 </section>
                 </form>
-            </div>
-        )
-    }
+                </>
+    )
 }
+// }
 
 export default Profile
