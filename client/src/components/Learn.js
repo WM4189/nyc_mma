@@ -4,6 +4,7 @@
 // import Capoeira from '../LearnComp/Capoeira'
 // import Jkd from '../LearnComp/Jkd'
 import { NavLink } from 'react-router-dom'
+import Video from '../video/co_ed.mp4'
 
 
 const linkStyles = {
@@ -16,7 +17,8 @@ const linkStyles = {
     color: "white",
   };
 
-function Learn (){
+function Learn (props){
+  // console.log(props);
     return(
         <div>
             <nav>
@@ -26,7 +28,25 @@ function Learn (){
             <NavLink to="/jkd" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
             <NavLink to="/thai" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
             </nav>
-        <h1>Expand Your Mind</h1>
+        {/* <h1>Expand Your Mind</h1> */}
+        <video
+            autoPlay
+            loop
+            muted
+            style={{
+              position: 'fixed',
+              width: "100%",
+              left: "50%",
+              top: "50%",
+              height: "115%",
+              objectFit: "cover",
+              transform: "translate(-50%, -50%)",
+              zIndex: "-1",
+              overflow: "hidden"
+            }}
+            >
+              <source src={Video} type="video/mp4" />
+          </video>
         </div>
     )
 }

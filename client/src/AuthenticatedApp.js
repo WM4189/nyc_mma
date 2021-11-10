@@ -61,7 +61,8 @@ const [arts, setArts] = useState([])
 
   // console.log(arts[0].bjj)
   // console.log(bjj)
-
+  
+// const thing = arts[0].bjj
   return (
     <div className="App">
       <nav>
@@ -73,10 +74,11 @@ const [arts, setArts] = useState([])
         </span>
         <span>Logged in as {currentUser.email} <button onClick={handleLogout}>Logout</button></span>
       </nav>
+      {/* {thing} */}
       <Switch>
 
         <Route path="/learn">
-        <Learn currentUser={currentUser} />
+        <Learn arts={arts} currentUser={currentUser} />
         </Route>
 
         <Route path="/train">

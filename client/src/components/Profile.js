@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 import React, { Component } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-
+// import Notes from "../image/Notes.jpg"
 
 const otherStyles = {
     display: "inline-block",
@@ -74,7 +74,7 @@ const linkStyles = {
     return(
         <>
         <h1>{username}'s Training Journal</h1>
-        
+        {/* <img src={Notes} alt="Notes" width="500" height="600" /> */}
         <form onSubmit={handleSubmit}>
             {/* <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
                 <textarea
