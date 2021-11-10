@@ -6,7 +6,7 @@ import Profile from './components/Profile'
 import ReviewForm from './components/ReviewForm'
 import GymForm from './components/GymForm'
 
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
 
 
@@ -33,6 +33,7 @@ const linkStyles = {
 
 function AuthenticatedApp({ currentUser, setCurrentUser }) {
 const [jou, setJou] = useState(currentUser.journal)
+const [arts, setArts] = useState([])
 const [bjj, setBjj] = useState("")
 const [box, setBox] = useState("")
 const [cap, setCap] = useState("")
@@ -50,7 +51,13 @@ const [thai, setThai] = useState("")
       })
   }
 
-  
+  useEffect(() => {
+    fetch("/arts")
+      .then(res => res.json())
+      .then(arts => setArts(arts))
+  }, [setArts])
+
+  // console.log(arts[0].bjj)
 
   return (
     <div className="App">

@@ -33,9 +33,10 @@ const linkStyles = {
 class Bjj extends Component {
     render(){
         const {bjj, setBjj} = this.props
-
+        // console.log(bjj)
         function handleSubmit(event, { data }) {
             // event.preventDefault();
+            
             fetch(`/arts/1`, {
                 method: 'PATCH',
                 credentials: 'include',
@@ -47,7 +48,7 @@ class Bjj extends Component {
                 })
             })
             .then(r => r.json())
-            .then(d => setBjj(d))
+            .then(bjj => setBjj(bjj))
             
         }
 
@@ -60,21 +61,23 @@ class Bjj extends Component {
         <NavLink to="/jkd" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
         <NavLink to="/thai" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
         </nav>
-
+        
         <form onSubmit={handleSubmit}>
-            <h1><button style={otherStyles} type="submit">Save Entry</button></h1>
-            <section >
-            <label>
-                <textarea>{bjj}</textarea>
-            {/* <textarea
+            <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
+                <textarea
+                id="art"
             value={bjj}
             onChange={(e) => setBjj(e.target.value)}
-            /> */}
+            ></textarea>
+            <section >
+            <label>
+                
+       
             </label>
 
             <CKEditor
                     editor={ ClassicEditor }
-                    data="Journal Away..."
+                    data="History..."
                     onReady={ editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log( 'Editor is ready to use!', editor );

@@ -36,7 +36,7 @@ class Profile extends Component {
                 })
             })
             .then(r => r.json())
-            .then(d => setJou(d))
+            .then(jou => setJou(jou))
             
         }
 
@@ -47,11 +47,14 @@ class Profile extends Component {
             <h1><button style={linkStyles} type="submit">Save Entry</button></h1>
             <section >
             <label>
-            {/* <textarea
+            <textarea
+             id="art"
             value={jou}
             onChange={(e) => setJou(e.target.value)}
-            /> */}
+            />
             </label>
+
+            {/* {jou} */}
 
             <CKEditor
                     editor={ ClassicEditor }
