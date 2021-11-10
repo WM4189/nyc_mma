@@ -36,7 +36,7 @@ function Login({ setCurrentUser }) {
             history.push('/home')
           })
         } else {
-          setCurrentUser({ username: "Guest" })
+          setCurrentUser({id: 15, username: 'Guest', email: 'Guest', journal: '<p>Make an account so you have a personal Training Journal!</p>'})
           history.push('/home')
           res.json().then(errors => {
             console.error(errors)

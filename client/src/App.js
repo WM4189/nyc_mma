@@ -25,7 +25,7 @@ function App() {
       })
   }, [])
 
-  // console.log(currentUser)
+  console.log(currentUser)
 
   if(!authChecked) { return <div></div>}
   return (

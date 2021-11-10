@@ -37,7 +37,7 @@ luie = User.create(username: "Luie", email:"sweet_lu@email.com", password: "pass
 jackle = User.create(username: "Jackle", email:"cactus_jack@email.com", password: "password", journal: "Training Journal Entries!!!!!!")
 tonka = User.create(username: "Tonka", email:"t_bone@email.com", password: "password", journal: "Training Journal Entries!!!!!!")
 
-User.create(username: "Guest", email: "Guest", password: "password", journal: "Training Journal Entries!!!!!!")
+# User.create(username: "Guest", email: "Guest", password: "password", journal: "Training Journal Entries!!!!!!")
 
 puts "🌱 Seeding UserGyms..."
 UserGym.create(rating: 4, review: "AMAZING GYM, AMAZING WORKOUTS! The staff here is incredibly friendly and extremely qualified! They know how to push you to the limit in the best way possible with your workouts. You will not leave disappointed! Such a family vibe as soon as you walk in the doors – I highly recommend checking this gym out.", user_id: tonka.id, gym_id: kings.id )
