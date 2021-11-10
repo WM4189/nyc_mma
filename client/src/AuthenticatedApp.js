@@ -34,7 +34,7 @@ const linkStyles = {
 function AuthenticatedApp({ currentUser, setCurrentUser }) {
 const [jou, setJou] = useState(currentUser.journal)
 const [arts, setArts] = useState([])
-const [bjj, setBjj] = useState("")
+// const [bjj, setBjj] = useState("")
 const [box, setBox] = useState("")
 const [cap, setCap] = useState("")
 const [jkd, setJkd] = useState("")
@@ -54,10 +54,14 @@ const [thai, setThai] = useState("")
   useEffect(() => {
     fetch("/arts")
       .then(res => res.json())
-      .then(arts => setArts(arts))
+      .then(arts => {
+        setArts(arts)
+        // setBjj(arts[0].bjj)
+      })
   }, [setArts])
 
   // console.log(arts[0].bjj)
+  // console.log(bjj)
 
   return (
     <div className="App">
@@ -89,7 +93,8 @@ const [thai, setThai] = useState("")
         </Route>
 
         <Route path='/bjj'>
-          <Bjj bjj={bjj} setBjj={setBjj} />
+          {/* <Bjj bjj={bjj} setBjj={setBjj} /> */}
+          <Bjj  />
         </Route>
 
         <Route path='/boxing'>
