@@ -1,20 +1,29 @@
 import './App.css';
 import Home from './components/Home'
-import Learn from './components/Learn'
+import Read from './components/Read'
+import Write from './components/Write'
 import Train from './components/Train'
 import Profile from './components/Profile'
 import ReviewForm from './components/ReviewForm'
 import GymForm from './components/GymForm'
 
+
 import {useState, useEffect} from "react";
 import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
 
 
-import Bjj from './LearnComp/Bjj'
-import Boxing from './LearnComp/Boxing'
-import Capoeira from './LearnComp/Capoeira'
-import Jkd from './LearnComp/Jkd'
-import Thai from './LearnComp/Thai'
+import BjjW from './WriteCo/BjjW'
+import BoxingW from './WriteCo/BoxingW'
+import CapoeiraW from './WriteCo/CapoeiraW'
+import JkdW from './WriteCo/JkdW'
+import ThaiW from './WriteCo/ThaiW'
+
+
+import BjjR from './ReadCo/BjjR'
+import BoxingR from './ReadCo/BoxingR'
+import CapoeiraR from './ReadCo/CapoeiraR'
+import JkdR from './ReadCo/JkdR'
+import ThaiR from './ReadCo/ThaiR'
 
 const linkStyles = {
   display: "inline-block",
@@ -68,7 +77,8 @@ const [arts, setArts] = useState([])
       <nav>
         <span id="header" name="header">
           <NavLink to="/home" style={linkStyles} activeStyle={{background: "gray"}}>Home</NavLink>
-          <NavLink to="/learn" style={linkStyles} activeStyle={{background: "gray"}}>Learn</NavLink>
+          <NavLink to="/read" style={linkStyles} activeStyle={{background: "gray"}}>Read</NavLink>
+          <NavLink to="/write" style={linkStyles} activeStyle={{background: "gray"}}>Write</NavLink>
           <NavLink to="/train" style={linkStyles} activeStyle={{background: "gray"}}>Train</NavLink>
           <NavLink to="/profile" style={linkStyles} activeStyle={{background: "gray"}}>{currentUser.username}</NavLink>{" - "}
         </span>
@@ -77,8 +87,12 @@ const [arts, setArts] = useState([])
       {/* {thing} */}
       <Switch>
 
-        <Route path="/learn">
-        <Learn arts={arts} currentUser={currentUser} />
+        <Route path="/read">
+        <Read arts={arts} currentUser={currentUser} />
+        </Route>
+
+        <Route path="/write">
+        <Write arts={arts} currentUser={currentUser} />
         </Route>
 
         <Route path="/train">
@@ -93,24 +107,45 @@ const [arts, setArts] = useState([])
           <Home currentUser={currentUser} />
         </Route>
 
-        <Route path='/bjj'>
-          <Bjj  />
+        <Route path='/bjjW'>
+          <BjjW  />
         </Route>
 
-        <Route path='/boxing'>
-          <Boxing  />
+        <Route path='/bjjR'>
+          <BjjR  />
         </Route>
 
-        <Route path='/capoeira'>
-          <Capoeira  />
+        <Route path='/boxingW'>
+          <BoxingW  />
         </Route>
 
-        <Route path='/jkd'>
-          <Jkd />
+        <Route path='/boxingR'>
+          <BoxingR  />
         </Route>
 
-        <Route path='/thai'>
-          <Thai />
+        <Route path='/capoeiraW'>
+          <CapoeiraW  />
+        </Route>
+
+
+        <Route path='/capoeiraR'>
+          <CapoeiraR  />
+        </Route>
+
+        <Route path='/jkdW'>
+          <JkdW />
+        </Route>
+
+        <Route path='/jkdR'>
+          <JkdR />
+        </Route>
+
+        <Route path='/thaiW'>
+          <ThaiW />
+        </Route>
+
+        <Route path='/thaiR'>
+          <ThaiR />
         </Route>
 
         <Route path='/reviews'>

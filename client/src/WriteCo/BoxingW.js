@@ -36,19 +36,19 @@ const linkStyles = {
         // const {bjj, setBjj} = this.props
         // const bj = bjj.bjj
         // console.log(bjj)
-        function Capoeira (){
-            const [cap, setCap] = useState([])
+        function BoxingW (){
+            const [box, setBox] = useState([])
 
             useEffect(() => {
                 fetch("/arts")
                   .then(res => res.json())
-                  .then(cap => {
+                  .then(box => {
                     //   console.log(bjj[0].bjj)
-                    setCap(cap[0].capoeira)
+                    setBox(box[0].boxing)
                   })
               }, [])
 
-              console.log(cap)
+              console.log(box)
 
         function handleSubmit(event, { data }) {
             // event.preventDefault();
@@ -60,7 +60,7 @@ const linkStyles = {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                "capoeira": data
+                "boxing": data
                 })
             })
             // .then(r => r.json())
@@ -71,11 +71,11 @@ const linkStyles = {
     return(
         <>
         <nav>
-        <NavLink to="/bjj" style={linkStyles} activeStyle={{background: "gray"}}>BJJ</NavLink>
-        <NavLink to="/boxing" style={linkStyles} activeStyle={{background: "gray"}}>Boxing</NavLink>
-        <NavLink to="/capoeira" style={linkStyles} activeStyle={{background: "gray"}}>Capoeira</NavLink>
-        <NavLink to="/jkd" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
-        <NavLink to="/thai" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
+        <NavLink to="/bjjW" style={linkStyles} activeStyle={{background: "gray"}}>BJJ</NavLink>
+        <NavLink to="/boxingW" style={linkStyles} activeStyle={{background: "gray"}}>Boxing</NavLink>
+        <NavLink to="/capoeiraW" style={linkStyles} activeStyle={{background: "gray"}}>Capoeira</NavLink>
+        <NavLink to="/jkdW" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
+        <NavLink to="/thaiW" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
         </nav>
         
         <form onSubmit={handleSubmit}>
@@ -93,7 +93,7 @@ const linkStyles = {
 
             <CKEditor
                     editor={ ClassicEditor }
-                    data={cap}
+                    data={box}
                     onReady={ editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log( 'Editor is ready to use!', editor );
@@ -117,4 +117,4 @@ const linkStyles = {
 }
 // }
 
-export default Capoeira
+export default BoxingW

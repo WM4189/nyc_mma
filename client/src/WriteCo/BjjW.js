@@ -36,7 +36,7 @@ const linkStyles = {
         // const {bjj, setBjj} = this.props
         // const bj = bjj.bjj
         // console.log(bjj)
-        function Bjj (){
+        function BjjW (){
             const [bjj, setBjj] = useState([])
 
             useEffect(() => {
@@ -48,7 +48,7 @@ const linkStyles = {
                   })
               }, [])
 
-              console.log(bjj)
+            //   console.log(bjj)
 
         function handleSubmit(event, { data }) {
             // event.preventDefault();
@@ -71,11 +71,11 @@ const linkStyles = {
     return(
         <>
         <nav>
-        <NavLink to="/bjj" style={linkStyles} activeStyle={{background: "gray"}}>BJJ</NavLink>
-        <NavLink to="/boxing" style={linkStyles} activeStyle={{background: "gray"}}>Boxing</NavLink>
-        <NavLink to="/capoeira" style={linkStyles} activeStyle={{background: "gray"}}>Capoeira</NavLink>
-        <NavLink to="/jkd" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
-        <NavLink to="/thai" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
+        <NavLink to="/bjjW" style={linkStyles} activeStyle={{background: "gray"}}>BJJ</NavLink>
+        <NavLink to="/boxingW" style={linkStyles} activeStyle={{background: "gray"}}>Boxing</NavLink>
+        <NavLink to="/capoeiraW" style={linkStyles} activeStyle={{background: "gray"}}>Capoeira</NavLink>
+        <NavLink to="/jkdW" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
+        <NavLink to="/thaiW" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
         </nav>
         
         <form onSubmit={handleSubmit}>
@@ -117,4 +117,4 @@ const linkStyles = {
 }
 // }
 
-export default Bjj
+export default BjjW

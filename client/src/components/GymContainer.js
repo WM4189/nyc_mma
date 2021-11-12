@@ -55,7 +55,7 @@ const stars = average_rating
                 
                 {/* {stars} <Rating defaultValue={stars} precision={0.0625} readOnly /> {total_reviews} Reviews */}
                 <div id='stars'>
-                {stars ? stars.toFixed(2) : "0"}/5 <Rating defaultValue={stars} precision={0.1} readOnly /> {total_reviews} {total_reviews === 1 ? "Review" : "Reviews"}
+                {stars ? stars.toFixed(2) : "0"}/5 <Rating defaultValue={stars} precision={0.25} readOnly /> {total_reviews} {total_reviews === 1 ? "Review" : "Reviews"}
                 </div>
 
                 {/* <Rating defaultValue={stars} precision={0.0625} readOnly />  */}
