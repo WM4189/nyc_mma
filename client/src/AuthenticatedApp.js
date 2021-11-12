@@ -84,7 +84,9 @@ const [arts, setArts] = useState([])
           {/* <NavLink to="/read" style={linkStyles} activeStyle={{background: "gray"}}>Read</NavLink>
           <NavLink to="/write" style={linkStyles} activeStyle={{background: "gray"}}>Write</NavLink> */}
           <NavLink to="/train" style={linkStyles} activeStyle={{background: "gray"}}>Train</NavLink>
-          <NavLink to="/profile" style={linkStyles} activeStyle={{background: "gray"}}>{currentUser.username}</NavLink>{" - "}
+          {/* <NavLink to="/profile" style={linkStyles} activeStyle={{background: "gray"}}>{currentUser.username}</NavLink>{" - "} */}
+          <NavLink to="/profile" style={linkStyles} activeStyle={{background: "gray"}}>{currentUser.username}</NavLink>
+
         </span>
         <span>Logged in as {currentUser.email} <button onClick={handleLogout}>Logout</button></span>
       </nav>
