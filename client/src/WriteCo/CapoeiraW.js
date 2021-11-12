@@ -30,6 +30,17 @@ const linkStyles = {
     color: "white",
   };
 
+  const otherLinkStyles = {
+    // display: "inline-block",
+    width: "85px",
+    padding: "2px",
+    // margin: "0 6px 6px",
+    // background: "transparent",
+    // textDecoration: "none",
+    // color: "black",  
+  };
+
+
 
 // class Bjj extends Component {
 //     render(){
@@ -37,6 +48,8 @@ const linkStyles = {
         // const bj = bjj.bjj
         // console.log(bjj)
         function CapoeiraW (){
+            const history = useHistory();
+
             const [cap, setCap] = useState([])
 
             useEffect(() => {
@@ -79,6 +92,10 @@ const linkStyles = {
         </nav>
         
         <form onSubmit={handleSubmit}>
+        <button 
+          style={otherLinkStyles}
+          onClick={() => history.push("/capoeiraR")} 
+          >Read</button>
             {/* <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
                 <textarea
                 id="art"

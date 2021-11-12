@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { useHistory, useLocation, Redirect, NavLink } from "react-router-dom";
 import {useState, useEffect} from "react";
 
 import parse from 'html-react-parser';
@@ -13,8 +13,18 @@ const linkStyles = {
     color: "white",
   };
 
-  function BjjR (props){
+  const otherLinkStyles = {
+    // display: "inline-block",
+    width: "85px",
+    padding: "2px",
+    // margin: "0 6px 6px",
+    // background: "transparent",
+    // textDecoration: "none",
+    // color: "black",  
+  };
 
+  function BjjR (props){
+    const history = useHistory();
     const [bjj, setBjj] = useState([])
   
     useEffect(() => {
@@ -44,7 +54,11 @@ const linkStyles = {
           {/* <h1>Expand Your Mind</h1> */}
   
           {/* {ReactHtmlParser(`${bjj}`)} */}
-  
+          <button 
+          style={otherLinkStyles}
+          onClick={() => history.push("/bjjW")} 
+          >Edit</button>
+
           <div>{parse(rend)}</div>
   
           {/* <video

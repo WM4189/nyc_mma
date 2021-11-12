@@ -1,4 +1,4 @@
-import { useHistory, NavLink } from "react-router-dom";
+import { useHistory, useLocation, Redirect, NavLink } from "react-router-dom";
 import {useState, useEffect} from "react";
 import React, { Component } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
@@ -30,6 +30,15 @@ const linkStyles = {
     color: "white",
   };
 
+  const otherLinkStyles = {
+    // display: "inline-block",
+    width: "85px",
+    padding: "2px",
+    // margin: "0 6px 6px",
+    // background: "transparent",
+    // textDecoration: "none",
+    // color: "black",  
+  };
 
 // class Bjj extends Component {
 //     render(){
@@ -37,6 +46,8 @@ const linkStyles = {
         // const bj = bjj.bjj
         // console.log(bjj)
         function BoxingW (){
+            const history = useHistory();
+
             const [box, setBox] = useState([])
 
             useEffect(() => {
@@ -77,8 +88,13 @@ const linkStyles = {
         <NavLink to="/jkdW" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
         <NavLink to="/thaiW" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
         </nav>
-        
+
         <form onSubmit={handleSubmit}>
+        <button 
+          style={otherLinkStyles}
+          onClick={() => history.push("/boxingR")} 
+          >Read</button>
+
             {/* <h1><button style={otherStyles} type="submit">Save Edits</button></h1>
                 <textarea
                 id="art"

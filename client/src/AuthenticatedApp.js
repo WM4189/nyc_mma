@@ -1,8 +1,11 @@
 import './App.css';
 import Home from './components/Home'
 import Read from './components/Read'
+import Learn from './components/Learn'
+
 import Write from './components/Write'
 import Train from './components/Train'
+
 import Profile from './components/Profile'
 import ReviewForm from './components/ReviewForm'
 import GymForm from './components/GymForm'
@@ -77,8 +80,9 @@ const [arts, setArts] = useState([])
       <nav>
         <span id="header" name="header">
           <NavLink to="/home" style={linkStyles} activeStyle={{background: "gray"}}>Home</NavLink>
-          <NavLink to="/read" style={linkStyles} activeStyle={{background: "gray"}}>Read</NavLink>
-          <NavLink to="/write" style={linkStyles} activeStyle={{background: "gray"}}>Write</NavLink>
+          <NavLink to="/learn" style={linkStyles} activeStyle={{background: "gray"}}>Learn</NavLink>
+          {/* <NavLink to="/read" style={linkStyles} activeStyle={{background: "gray"}}>Read</NavLink>
+          <NavLink to="/write" style={linkStyles} activeStyle={{background: "gray"}}>Write</NavLink> */}
           <NavLink to="/train" style={linkStyles} activeStyle={{background: "gray"}}>Train</NavLink>
           <NavLink to="/profile" style={linkStyles} activeStyle={{background: "gray"}}>{currentUser.username}</NavLink>{" - "}
         </span>
@@ -86,6 +90,10 @@ const [arts, setArts] = useState([])
       </nav>
       {/* {thing} */}
       <Switch>
+
+        <Route path="/learn">
+        <Learn arts={arts} currentUser={currentUser} />
+        </Route>
 
         <Route path="/read">
         <Read arts={arts} currentUser={currentUser} />

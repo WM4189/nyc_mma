@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { useHistory, useLocation, Redirect, NavLink } from "react-router-dom";
 import {useState, useEffect} from "react";
 
 import parse from 'html-react-parser';
@@ -13,8 +13,19 @@ const linkStyles = {
     color: "white",
   };
 
-  function CapoeiraR (props){
+  const otherLinkStyles = {
+    // display: "inline-block",
+    width: "85px",
+    padding: "2px",
+    // margin: "0 6px 6px",
+    // background: "transparent",
+    // textDecoration: "none",
+    // color: "black",  
+  };
 
+
+  function CapoeiraR (props){
+    const history = useHistory();
     const [cap, setCap] = useState([])
   
     useEffect(() => {
@@ -40,6 +51,11 @@ const linkStyles = {
               <NavLink to="/jkdR" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
               <NavLink to="/thaiR" style={linkStyles} activeStyle={{background: "gray"}}>Muay Thai</NavLink>
               </nav>
+
+              <button 
+          style={otherLinkStyles}
+          onClick={() => history.push("/capoeiraW")} 
+          >Edit</button>
   
           {/* <h1>Expand Your Mind</h1> */}
   
