@@ -14,6 +14,7 @@ const linkStyles = {
     background: "black",
     textDecoration: "none",
     color: "white",
+    boxShadow: "none",
   };
 
 function Learn (props){

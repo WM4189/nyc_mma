@@ -106,7 +106,7 @@ const linkStyles = {
 
             <div id="img">
           <div id="card">
-          <div id="list">
+          <div id="listW">
 
             <CKEditor
                     editor={ ClassicEditor }
