@@ -40,7 +40,7 @@ function Train (props){
 
     return(
         <>
-        <h1 id="addGym">Explore Library or {<NavLink style={linkStyles} to= '/new_gym'>Add New Gym</NavLink> }</h1>
+        <h1 id="addGym">Explore or {<NavLink style={linkStyles} to= '/new_gym'>Add Gym</NavLink> }</h1>
         {/* <h1>{<NavLink style={linkStyles}  to= '/new_gym'>Add New Gym</NavLink> }</h1> */}
         
 
