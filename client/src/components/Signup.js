@@ -40,6 +40,7 @@ function Signup({ setCurrentUser }) {
           res.json().then(user => {
             setCurrentUser(user)
             history.push('/home')
+            window.location.reload()
           })
         } else {
           res.json().then(errors => {

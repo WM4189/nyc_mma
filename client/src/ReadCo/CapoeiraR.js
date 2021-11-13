@@ -61,7 +61,11 @@ const linkStyles = {
   
           {/* {ReactHtmlParser(`${bjj}`)} */}
   
-          <div>{parse(rend)}</div>
+          <div id="img">
+          <div id="card">
+          <div id="list">{parse(rend)}</div>
+          </div>
+          </div>
   
           {/* <video
               autoPlay

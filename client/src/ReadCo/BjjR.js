@@ -58,8 +58,12 @@ const linkStyles = {
           style={otherLinkStyles}
           onClick={() => history.push("/bjjW")} 
           >Edit</button>
-
-          <div>{parse(rend)}</div>
+          
+          <div id="img">
+          <div id="card">
+          <div id="list">{parse(rend)}</div>
+          </div>
+          </div>
   
           {/* <video
               autoPlay

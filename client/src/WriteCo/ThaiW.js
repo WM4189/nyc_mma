@@ -102,9 +102,10 @@ const linkStyles = {
             onChange={(e) => setBjj(e.target.value)}
             >{bjj}</textarea> */}
             <section >
-            <label>
-                
-            </label>
+
+            <div id="img">
+          <div id="card">
+          <div id="list">
 
             <CKEditor
                     editor={ ClassicEditor }
@@ -125,6 +126,9 @@ const linkStyles = {
                         console.log( 'Focus.', editor );
                     } }
                 />
+                </div>
+                </div>
+                </div>
                 </section>
                 </form>
                 </>
