@@ -21,7 +21,7 @@ andersons = Gym.create(name: "Anderson's Martial Arts Academy", address: "412 Br
 uma = Gym.create(name: "Unlimited Martial Arts", address: "505 Union Ave, Brooklyn, NY 11211", link: "https://unlimitedmartialartsacademy.com/", art: "JKD")
 maa = Gym.create(name: "Martial Arts Academy", address: "184 N 8th St, Brooklyn, NY 11211", link: "https://www.nymaa.com/", art: "JKD")
 
-unlimited = Gym.create(name: "Unity Jiu Jitsu School", address: "Stair A Door, Basement, 144 W 14th St, New York, NY 10011", link: "https://unityjiujitsu.com/", art: "BJJ")
+unlimited = Gym.create(name: "Unity Jiu Jitsu School", address: "Stair A Door, 144 W 14th St, New York, NY 10011", link: "https://unityjiujitsu.com/", art: "BJJ")
 ronin = Gym.create(name: "Ronin Athletics", address: "265 Madison Ave FL 5, New York, NY 10016", link: "https://roninathletics.com/", art: "BJJ")
 radical = Gym.create(name: "Radical MMA", address: "235 W 29th St, New York, NY 10001", link: "https://radicalmmanyc.com/", art: "BJJ")
 

@@ -60,6 +60,8 @@ textarea {
 	resize: none;
 	/* margin-left: 10%; */
 	font-size: 18px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 textarea:focus {
@@ -86,16 +88,45 @@ input:focus {
 
 #gymForm input {
   /* position: fixed; */
-  display: inline-block;
-  width: 13rem;
-  padding: 0.25rem;
-  max-width: 70%
+  /* display: inline-block; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 10px;
+  width: 300px;
+  padding: 0.30rem;
+  max-width: 150%;
+  min-width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  resize: none;
+}
+
+#gymForm {
+  /* position: fixed; */
+  /* display: inline-block; */
+  /* width: 700rem; */
+  padding: 0.30rem;
+  /* max-width: 100%; */
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+}
+
+#gymForms{
+  /* display: inline-flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px; */
+  /* margin: 0 auto; */
+  /* padding: 20px 40px; */
+  /* width: auto; */
 }
 
 .authForm input {
   width: 16rem;
   padding: 0.5rem;
-  max-width: 85%
+  max-width: 85%;
+  border-radius: 10px;
+  font-size: 17px;
 }
 
 .authForm label{
@@ -120,6 +151,8 @@ input:focus {
   vertical-align: top;
   padding: 0.5rem;
   text-align: center;
+  border-radius: 10px;
+  font-size: 17px;
 }
 
 

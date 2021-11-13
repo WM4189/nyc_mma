@@ -56,11 +56,11 @@ function GymForm(props){
 
     return (
         <>
-       
+        <div id='gymForms'>
         <form id="gymForm" onSubmit={handleSubmit}>
         <h1><button style={linkStyles} type="submit">Save Gym</button></h1>
-            <section style={{display: 'flex', justifyContent: 'center'}}>
-          <label>
+            <section style={{display: 'flex', flexDirection: 'column', margin: '0 auto', width: '20%'}}>
+          <label id='textarea'>
            Name:
             <input
               type="name"
@@ -98,7 +98,7 @@ function GymForm(props){
           </label>
           </section>
         </form>
-
+        </div>
         </>
     )
 
