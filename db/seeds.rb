@@ -10,11 +10,11 @@
 
 
 ## (rails db:reset ********************************)
-puts "Deleting old data..."
-Gym.destroy_all
-User.destroy_all
-UserGym.destroy_all
-Art.destroy_all
+# puts "Deleting old data..."
+# Gym.destroy_all
+# User.destroy_all
+# UserGym.destroy_all
+# Art.destroy_all
 
 puts "🌱 Seeding Gyms..."
 andersons = Gym.create(name: "Anderson's Martial Arts Academy", address: "412 Broadway #2, New York, NY, 10013", link: "https://www.andersonsmartialarts.com/", art: "JKD")
