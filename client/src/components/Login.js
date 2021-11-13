@@ -17,8 +17,8 @@ const linkStyles = {
 
 function Login({ setCurrentUser }) {
   const history = useHistory()
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username, setUsername] = useState('Guest')
+  const [password, setPassword] = useState('password')
   
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -36,7 +36,7 @@ function Login({ setCurrentUser }) {
             history.push('/home')
           })
         } else {
-          setCurrentUser({id: 15, username: 'Guest', email: 'Guest', journal: '<p>Make an account so you have a personal Training Journal!</p>'})
+          setCurrentUser({ username: 'Guest', email: 'Guest', password: 'password', journal: "Training Journal Entries!!!!!!"})
           history.push('/home')
           res.json().then(errors => {
             console.error(errors)
