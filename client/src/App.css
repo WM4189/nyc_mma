@@ -15,10 +15,12 @@
 @media (max-width: 767px) {
   #vid {
       display: none;
+      width:1%;
+      height: 1%;
   }
   body {
       background: #282c34;
-      background-size: cover;
+      /* background-size: cover; */
       color: white;
   }
 

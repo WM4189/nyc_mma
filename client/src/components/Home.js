@@ -4,7 +4,7 @@ function Home (){
     return(
         <>
         {/* <strong><em><h1>NYC MMA</h1></em></strong> */}
-        <video id="vid" className="vid2"
+        <video id="vid" 
             autoPlay
             loop
             muted
