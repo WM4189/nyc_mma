@@ -21,7 +21,7 @@ function GymFilter({filter, setFilter}){
             className="searchbar"
             type="text"
             id="search"
-            placeholder="Type to filter..."
+            placeholder="Gym Name or Focus"
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
         />
