@@ -16,7 +16,7 @@ function UnauthenticatedApp({ setCurrentUser }) {
       </Route>
       <Redirect to="/" />
     </Switch>
-    <video
+    <video id="vid" className="vid1"
             autoPlay
             loop
             muted

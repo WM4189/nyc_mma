@@ -29,7 +29,7 @@ function Learn (props){
             <NavLink to="/capoeiraR" style={linkStyles} activeStyle={{background: "gray"}}>Capoeira</NavLink>
             </nav>
 
-        <video
+        <video id="vid" className="vid3"
             autoPlay
             loop
             muted

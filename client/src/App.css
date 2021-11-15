@@ -1,3 +1,47 @@
+@media (min-aspect-ratio: 16/9) {
+  #vid {
+      width:100%;
+      height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #vid { 
+      width:auto;
+      height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  video#vid.vid1 {
+      display: none;
+  }
+  body {
+      background: url('https://www.teahub.io/photos/full/302-3025413_hd-zen-wallpaper-zen-wallpaper-4k.jpg');
+      background-size: cover;
+  }
+}
+
+@media (max-width: 767px) {
+  video#vid.vid2 {
+      display: none;
+  }
+  body {
+      background: url('https://wallpaperaccess.com/full/824373.jpg');
+      background-size: cover;
+  }
+}
+
+@media (max-width: 767px) {
+  video#vid.vid3 {
+      display: none;
+  }
+  body {
+      background: url('https://i.pinimg.com/originals/82/8b/1a/828b1a04e6dbfa4cdde4d9a727b0d29c.jpg');
+      background-size: cover;
+  }
+}
+
 #img img{
   width:40%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
