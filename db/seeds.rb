@@ -17,13 +17,13 @@ UserGym.destroy_all
 Art.destroy_all
 
 puts "🌱 Seeding Gyms..."
-andersons = Gym.create(name: "Anderson's Martial Arts Academy", address: "412 Broadway #2, New York, NY, 10013", link: "https://www.andersonsmartialarts.com/", art: "JKD")
-uma = Gym.create(name: "Unlimited Martial Arts", address: "505 Union Ave, Brooklyn, NY 11211", link: "https://unlimitedmartialartsacademy.com/", art: "JKD")
-maa = Gym.create(name: "Martial Arts Academy", address: "184 N 8th St, Brooklyn, NY 11211", link: "https://www.nymaa.com/", art: "JKD")
+andersons = Gym.create(name: "Anderson's Martial Arts Academy", address: "412 Broadway #2, New York, NY, 10013", link: "https://www.andersonsmartialarts.com/", art: "Jeet Kune Do")
+uma = Gym.create(name: "Unlimited Martial Arts", address: "505 Union Ave, Brooklyn, NY 11211", link: "https://unlimitedmartialartsacademy.com/", art: "Jeet Kune Do")
+maa = Gym.create(name: "Martial Arts Academy", address: "184 N 8th St, Brooklyn, NY 11211", link: "https://www.nymaa.com/", art: "Jeet Kune Do")
 
-unlimited = Gym.create(name: "Unity Jiu Jitsu School", address: "Stair A Door, 144 W 14th St, New York, NY 10011", link: "https://unityjiujitsu.com/", art: "BJJ")
-ronin = Gym.create(name: "Ronin Athletics", address: "265 Madison Ave FL 5, New York, NY 10016", link: "https://roninathletics.com/", art: "BJJ")
-radical = Gym.create(name: "Radical MMA", address: "235 W 29th St, New York, NY 10001", link: "https://radicalmmanyc.com/", art: "BJJ")
+unlimited = Gym.create(name: "Unity Jiu Jitsu School", address: "Stair A Door, 144 W 14th St, New York, NY 10011", link: "https://unityjiujitsu.com/", art: "Brazilian Jiu Jitsu")
+ronin = Gym.create(name: "Ronin Athletics", address: "265 Madison Ave FL 5, New York, NY 10016", link: "https://roninathletics.com/", art: "Brazilian Jiu Jitsu")
+radical = Gym.create(name: "Radical MMA", address: "235 W 29th St, New York, NY 10001", link: "https://radicalmmanyc.com/", art: "Brazilian Jiu Jitsu")
 
 kings = Gym.create(name: "Kings Combat", address: "219 S 3rd St, Brooklyn, NY 11211", link: "https://kingscombatwillyb.com/", art: "Muay Thai")
 ultimate = Gym.create(name: "Ultimate Gym", address: "5 W 30th St, New York, NY 10001", link: "https://ultimategymny.com/", art: "Muay Thai")

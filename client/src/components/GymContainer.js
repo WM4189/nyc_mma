@@ -40,6 +40,7 @@ function GymContainer(props){
 const review = join.map(rev => <p key={uid(rev)}><li><em>{rev.review}</em></li></p>)
 // const stars = average_rating ? average_rating.toFixed(2) : .1
 const stars = average_rating 
+const map = `https://maps.google.com/?q=${name}+${address}`
 
     return(
     <div id="contain">
@@ -71,7 +72,9 @@ const stars = average_rating
             </article>                </div>
 
                 <div style={{color: "black"}} className="flip-card-back">
-                <strong><a className='gym' href={link}>Website Link</a></strong>
+                {/* <strong><a className='gym' href={link}>Website Link</a></strong> */}
+                <strong><a className='gym' href={map}>View Map</a></strong>
+
                 <br />
                 <strong ><p>Reviews:</p></strong>
                             {review}

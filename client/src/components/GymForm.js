@@ -52,6 +52,7 @@ function GymForm(props){
         setArt("")
         // history.goBack()
         history.push('/train')
+        window.location.reload()
       }
 
     return (

@@ -85,8 +85,10 @@ nav {
 
 .searchbar{
   border-radius: 9px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   width: 12rem;
-  padding: 0.5rem;
+  padding: 0.3rem;
   max-width: 85%;
   font-size: 16.5px;
 }
@@ -108,7 +110,7 @@ nav {
 }
 
 .gym{
-  color: #41392f;
+  color: blue;
   background-color:transparent;
   border: none;
   text-decoration:underline dotted;
@@ -116,7 +118,7 @@ nav {
 }
 
 .gym:hover{
-  color: 41392f;
+  color: purple;
   background-color: transparent;
   border: none;
   box-shadow: none;

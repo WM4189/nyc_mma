@@ -102,6 +102,7 @@ function ReviewForm(props){
             Review:
             <textarea
               type="text"
+              placeholder="Share your experience with this Gym"
               name="review"
               value={review}
               onChange={(e) => setReview(e.target.value)}
