@@ -15,27 +15,28 @@
 @media (max-width: 767px) {
   #vid {
       display: none;
-      width:1%;
-      height: 1%;
   }
   body {
-      background: #282c34;
-      /* background-size: cover; */
+    background: url('https://www.colorbook.io/imagecreator.php?hex=282C34&width=1080&height=1920');
+      background-size: cover;
       color: white;
+      -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
   }
 
   a {
     color: white;
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .7px;
+    -webkit-text-stroke-color: gray;
   }
 
   button {
     color: white;
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: white;
   }
 }
 

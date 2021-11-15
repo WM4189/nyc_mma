@@ -31,17 +31,22 @@
     <meta property="og:image" content="%PUBLIC_URL%/image.png"/>
   </head>
   <body>
-    <script>
-      window.onload = removeAutoplay();
-      var videoLocation  = document.getElementById("vid");
-      function removeAutoplay() {
-        if(window.innerWidth <992){
-			    videoLocation.removeAttribute("autoplay");
-	      };
-      }
-    </script>
-    <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
-    <div id="root"></div>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+<!-- 
+      <script>
+                window.onload = addAutoplay();
+        var videoLocation  = document.querySelectorAll("vid");
+        function addAutoplay() {
+          if(window.innerWidth >992){
+            videoLocation.setAttribute("autoplay","");
+          };
+          
+        }
+      </script> -->
+
+    </div>
 
 
     <!--
