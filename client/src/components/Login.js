@@ -48,7 +48,7 @@ function Login({ setCurrentUser }) {
     <div className="authForm">
       <Redirect to="/" />
       <form onSubmit={handleSubmit}>
-        <h1>Welcome</h1>
+        <strong id="login">NYC MMA</strong>
         <p>
           <label 
             htmlFor="username"

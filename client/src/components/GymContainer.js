@@ -22,7 +22,8 @@ function GymContainer(props){
     // console.log(user_id.user_id.id)
     // console.log(gym_id)
    const gymName = {
-    textDecoration: "underline"
+    textDecoration: "underline",
+   
     }
 
 

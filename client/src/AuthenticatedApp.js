@@ -80,10 +80,10 @@ const [arts, setArts] = useState([])
       <nav>
         <span id="header" name="header">
           <NavLink to="/home" style={linkStyles} activeStyle={{background: "gray"}}>Home</NavLink>
+          <NavLink to="/train" style={linkStyles} activeStyle={{background: "gray"}}>Train</NavLink>
           <NavLink to="/learn" style={linkStyles} activeStyle={{background: "gray"}}>Learn</NavLink>
           {/* <NavLink to="/read" style={linkStyles} activeStyle={{background: "gray"}}>Read</NavLink>
           <NavLink to="/write" style={linkStyles} activeStyle={{background: "gray"}}>Write</NavLink> */}
-          <NavLink to="/train" style={linkStyles} activeStyle={{background: "gray"}}>Train</NavLink>
           {/* <NavLink to="/profile" style={linkStyles} activeStyle={{background: "gray"}}>{currentUser.username}</NavLink>{" - "} */}
           <NavLink to="/profile" style={linkStyles} activeStyle={{background: "gray"}}>{currentUser.username}</NavLink>
 

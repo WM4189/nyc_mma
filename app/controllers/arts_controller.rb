@@ -28,7 +28,7 @@ class ArtsController < ApplicationController
     private
 
     def art_params
-        params.permit(:id, :bjj, :boxing, :capoeira, :jkd, :thai)
+        params.permit(:id, :bjj, :boxing, :capoeira, :jkd, :thai, :share)
     end
 
 end
