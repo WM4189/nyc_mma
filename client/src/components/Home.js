@@ -106,7 +106,8 @@ function Home (){
                 </div>
                 </div>
                         <video id="vid" 
-                        
+                        playsInline
+                        autoPlay
                         loop
                         muted
                         style={{

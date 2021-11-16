@@ -17,9 +17,10 @@ function UnauthenticatedApp({ setCurrentUser }) {
       <Redirect to="/" />
     </Switch>
     <video id="vid" 
-            autoPlay
-            loop
-            muted
+              playsInline
+              autoPlay
+              loop
+              muted
             style={{
               position: 'fixed',
               width: "100%",

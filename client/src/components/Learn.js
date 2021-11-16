@@ -32,10 +32,11 @@ function Learn (props){
             </span>
 
         <video id="vid" 
-            autoPlay
-            loop
-            muted
-            style={{
+              playsInline
+              autoPlay
+              loop
+              muted
+              style={{
               position: 'fixed',
               width: "100%",
               left: "50%",
