@@ -128,9 +128,10 @@ function Home (){
                 :
                 <>
                         <video id="vid" 
-            autoPlay
-            loop
-            muted
+                        playsInline
+                        autoPlay
+                        loop
+                        muted
             style={{
               position: 'fixed',
               width: "100%",
