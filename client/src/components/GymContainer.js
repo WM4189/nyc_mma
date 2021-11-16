@@ -23,7 +23,7 @@ function GymContainer(props){
     // console.log(gym_id)
    const gymName = {
     textDecoration: "underline",
-   
+   fontSize: "25px",
     }
 
 
@@ -48,7 +48,7 @@ const map = `https://maps.google.com/?q=${name}+${address}`
         <div className="flip-card">
             <div className="flip-card-inner">
                 <div className="flip-card-front">
-                <article key={uid(name)} id="card" className="card">
+                <article key={uid(name)} className="card">
                 <h3 style={gymName}>{name}</h3>
                 {/* {average_rating.toFixed(2) * 20}% */}
                 {/* {average_rating} */}
@@ -64,7 +64,7 @@ const map = `https://maps.google.com/?q=${name}+${address}`
 
 
                 <p>{address}</p>
-                <br />
+                {/* <br /> */}
 
                 
                 {/* <strong>Flip card for {total_reviews === 1 ? "Review" : "Reviews"} </strong> ➜ */}

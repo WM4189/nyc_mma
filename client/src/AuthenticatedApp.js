@@ -1,5 +1,6 @@
 import './App.css';
 import Home from './components/Home'
+import HomeWelcome from './components/HomeWelcome'
 import Read from './components/Read'
 import Learn from './components/Learn'
 
@@ -115,6 +116,10 @@ const [arts, setArts] = useState([])
 
         <Route exact path="/home">
           <Home currentUser={currentUser} />
+        </Route>
+
+        <Route exact path="/welcome">
+          <HomeWelcome currentUser={currentUser} />
         </Route>
 
         <Route path='/bjjW'>
