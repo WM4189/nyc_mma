@@ -36,7 +36,7 @@
     border: none;
     box-shadow: none;
     /* text-shadow: 10px 10px 5px grey; */
-    text-shadow: 5px 5px 5px grey;
+    text-shadow: 2.5px 2.5px 10px grey;
 }
 
 #list h2{
