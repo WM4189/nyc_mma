@@ -39,6 +39,7 @@ function GymContainer(props){
     
 
 const review = join.map(rev => <p key={uid(rev)}><li><em>{rev.review}</em></li></p>)
+
 // const stars = average_rating ? average_rating.toFixed(2) : .1
 const stars = average_rating 
 const map = `https://maps.google.com/?q=${name}+${address}`
@@ -78,7 +79,8 @@ const map = `https://maps.google.com/?q=${name}+${address}`
 
                 <br />
                 <strong ><p>Reviews:</p></strong>
-                            {review}
+                            {review[0]}
+                            {review[1]}
                             
                             {/* <ReviewForm gym_name={name} user_id={user_id} gym_id={gym_id} /> */}
                 {/* <button style={linkStyles} onClick={(name, user_id, gym_id) => history.push('/reviews')}>Add Review </button> */}

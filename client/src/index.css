@@ -83,7 +83,7 @@ margin: 0 auto;
   padding: 20px 40px;
   flex: 0 1 24%;
   /* border: 2px solid #000000; */
-  box-shadow: 5px 5px 2.5px grey;
+  box-shadow: 5px 5px 10px grey;
   border-radius: 10px;
   background: gray;
   flex: 0 1 calc(25% - 1em);

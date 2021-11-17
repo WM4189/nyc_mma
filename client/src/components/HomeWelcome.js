@@ -18,7 +18,7 @@ function HomeWelcome(){
           })
       }, [])
   
-      const rend = '<h2>Welcome to NYC MMA</h2><figure class=\"table\"><table><tbody><tr><td><h4>This is a crowd sourced library for mixed martial arts gyms in the New York City metropolitan area. &nbsp; &nbsp;</h4><h4>If you are new to the world of martial arts or a seasoned brawler, the <i><strong>Learning</strong></i> tab includes a brief background of a few art forms. &nbsp;Feel free to review and add information as you see fit.</h4><h4>Below is the community bulletin board: including events, comments, questions and anything else you would like to share.</h4><h4>See you on the mats!</h4></td></tr></tbody></table></figure>'
+      const rend = "<h2>Welcome to NYC MMA</h2><figure class=\'table\'><table><tbody><tr><td><h4>This is a crowd sourced library for mixed martial arts gyms in the New York City metropolitan area. &nbsp; &nbsp;</h4><h4>If you are new to the world of martial arts or a seasoned brawler, the <i><strong>Learning</strong></i> tab includes a brief background of a few art forms. &nbsp;Feel free to review and add information as you see fit.</h4><h4>Below is the community bulletin board for events, comments, questions and anything else you would like to share.</h4><h4>See you on the mats!</h4></td></tr></tbody></table></figure>"
   
       function handleSubmit(event, { data }) {
         // event.preventDefault();
