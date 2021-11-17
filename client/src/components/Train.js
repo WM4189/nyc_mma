@@ -47,7 +47,7 @@ function Train (props){
         
         <GymFilter filter={filter} setFilter={setFilter}  />
         {/* {<NavLink style={linkStyles}  to= '/new_gym'>Add New Gym</NavLink> } */}
-
+        <div id="container">
         {filteredList.map(g => (
             <GymContainer
                 gym_id={g.id}
@@ -62,6 +62,7 @@ function Train (props){
                 total_reviews={g.user_gyms.length}
             />
         ))}
+        </div>
         </>
         )
 }
