@@ -101,7 +101,7 @@ input:focus {
   background: rgba(181, 181, 181, 0.92);
   text-align:center;
   border: 2px solid #40413f;
-  box-shadow: 5px 5px 2.5px grey;
+  box-shadow: 5px 5px 10px grey;
   border-radius: 20px;
 }
 
