@@ -1,4 +1,4 @@
-import { Redirect, useHistory, NavLink, Route } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import GymContainer from './GymContainer'
 import GymFilter from './GymFilter'
@@ -15,13 +15,10 @@ const linkStyles = {
     textDecoration: "link",
     transition: "background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out",
     transform: "translateY(-3px)"
-  };
-
-
-
+};
 
 function Train (props){
-    const {user_id, currentUser } = props
+    const { user_id } = props
     const [filter, setFilter] = useState("")
     const [gyms, setGyms] = useState([]);
     
@@ -41,30 +38,27 @@ function Train (props){
     return(
         <>
         <h1 id="addGym">Explore or {<NavLink style={linkStyles} to= '/new_gym'>Add Gym</NavLink> }</h1>
-        {/* <h1>{<NavLink style={linkStyles}  to= '/new_gym'>Add New Gym</NavLink> }</h1> */}
-        
-
         
         <GymFilter filter={filter} setFilter={setFilter}  />
-        {/* {<NavLink style={linkStyles}  to= '/new_gym'>Add New Gym</NavLink> } */}
+        
         <div id="container">
-        {filteredList.map(g => (
-            <GymContainer
-                gym_id={g.id}
-                key={uid(g)}
-                name={g.name}
-                address={g.address}
-                average_rating={g.average_rating}
-                link={g.link}
-                art={g.art}
-                join={g.user_gyms}
-                user_id={user_id}
-                total_reviews={g.user_gyms.length}
-            />
-        ))}
+            {filteredList.map(g => (
+                <GymContainer
+                    gym_id={g.id}
+                    key={uid(g)}
+                    name={g.name}
+                    address={g.address}
+                    average_rating={g.average_rating}
+                    link={g.link}
+                    art={g.art}
+                    join={g.user_gyms}
+                    user_id={user_id}
+                    total_reviews={g.user_gyms.length}
+                />
+            ))}
         </div>
         </>
-        )
+    )
 }
 
 export default Train

@@ -1,10 +1,5 @@
-import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
-// import Bjj from '../LearnComp/Bjj'
-// import Boxing from '../LearnComp/Boxing'
-// import Capoeira from '../LearnComp/Capoeira'
-// import Jkd from '../LearnComp/Jkd'
+import { NavLink } from 'react-router-dom'
 import Video from '../video/co_ed.mp4'
-
 
 const linkStyles = {
     display: "inline-block",
@@ -18,7 +13,6 @@ const linkStyles = {
   };
 
 function Learn (props){
-  // console.log(props);
     return(
         <div>
           <span>

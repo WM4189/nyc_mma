@@ -1,6 +1,5 @@
-import { useHistory, useLocation, Redirect, NavLink } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
 import {useState, useEffect} from "react";
-
 import parse from 'html-react-parser';
 
 const linkStyles = {
@@ -14,13 +13,8 @@ const linkStyles = {
   };
 
   const otherLinkStyles = {
-    // display: "inline-block",
     width: "85px",
     padding: "2px",
-    // margin: "0 6px 6px",
-    // background: "transparent",
-    // textDecoration: "none",
-    // color: "black",  
   };
 
   function BjjR (props){
@@ -31,18 +25,15 @@ const linkStyles = {
         fetch("/arts")
           .then(res => res.json())
           .then(bjj => {
-            //   console.log(bjj[0].bjj)
             setBjj(bjj[0].bjj)
           })
       }, [setBjj])
   
-      // console.log(typeof bjj)
-  
       const rend = bjj.toString()
   
-    // console.log(props);
       return(
           <div>
+            
             <nav>
             <NavLink to="/bjjR" style={linkStyles} activeStyle={{background: "gray"}}>BJJ</NavLink>
             <NavLink to="/boxingR" style={linkStyles} activeStyle={{background: "gray"}}>Boxing</NavLink>
@@ -50,10 +41,7 @@ const linkStyles = {
             <NavLink to="/jkdR" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
             <NavLink to="/capoeiraR" style={linkStyles} activeStyle={{background: "gray"}}>Capoeira</NavLink>
             </nav>
-  
-          {/* <h1>Expand Your Mind</h1> */}
-  
-          {/* {ReactHtmlParser(`${bjj}`)} */}
+          
           <button 
           style={otherLinkStyles}
           onClick={() => history.push("/bjjW")} 
@@ -64,28 +52,6 @@ const linkStyles = {
           <div id="list">{parse(rend)}</div>
           </div>
           </div>
-  
-          {/* <video
-              autoPlay
-              loop
-              muted
-              style={{
-                position: 'fixed',
-                width: "100%",
-                left: "50%",
-                top: "50%",
-                height: "115%",
-                objectFit: "cover",
-                transform: "translate(-50%, -50%)",
-                zIndex: "-1",
-                overflow: "hidden"
-              }}
-              >
-                <source src={Video} type="video/mp4" />
-            </video> */}
-  
-  
-  
           </div>
       )
   }

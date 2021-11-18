@@ -1,6 +1,5 @@
-import { useHistory, useLocation, Redirect, NavLink } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
 import {useState, useEffect} from "react";
-
 import parse from 'html-react-parser';
 
 const linkStyles = {
@@ -11,19 +10,12 @@ const linkStyles = {
     background: "black",
     textDecoration: "none",
     color: "white",
-  };
+};
 
-
-  const otherLinkStyles = {
-    // display: "inline-block",
+const otherLinkStyles = {
     width: "85px",
     padding: "2px",
-    // margin: "0 6px 6px",
-    // background: "transparent",
-    // textDecoration: "none",
-    // color: "black",  
-  };
-
+};
 
   function BoxingR (props){
     const history = useHistory();
@@ -33,18 +25,15 @@ const linkStyles = {
         fetch("/arts")
           .then(res => res.json())
           .then(box => {
-            //   console.log(bjj[0].bjj)
             setBox(box[0].boxing)
           })
       }, [setBox])
-  
-      // console.log(typeof bjj)
-  
+
       const rend = box.toString()
   
-    // console.log(props);
       return(
           <div>
+
             <nav>
             <NavLink to="/bjjR" style={linkStyles} activeStyle={{background: "gray"}}>BJJ</NavLink>
             <NavLink to="/boxingR" style={linkStyles} activeStyle={{background: "gray"}}>Boxing</NavLink>
@@ -53,41 +42,17 @@ const linkStyles = {
             <NavLink to="/capoeiraR" style={linkStyles} activeStyle={{background: "gray"}}>Capoeira</NavLink>
             </nav>
 
-              <button 
+          <button 
           style={otherLinkStyles}
           onClick={() => history.push("/boxingW")} 
-          >Edit</button>
-          {/* <h1>Expand Your Mind</h1> */}
-  
-          {/* {ReactHtmlParser(`${bjj}`)} */}
-  
+          >Edit
+          </button>
+
           <div id="img">
           <div id="card">
           <div id="list">{parse(rend)}</div>
           </div>
           </div>
-  
-          {/* <video
-              autoPlay
-              loop
-              muted
-              style={{
-                position: 'fixed',
-                width: "100%",
-                left: "50%",
-                top: "50%",
-                height: "115%",
-                objectFit: "cover",
-                transform: "translate(-50%, -50%)",
-                zIndex: "-1",
-                overflow: "hidden"
-              }}
-              >
-                <source src={Video} type="video/mp4" />
-            </video> */}
-  
-  
-  
           </div>
       )
   }

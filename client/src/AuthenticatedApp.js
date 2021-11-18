@@ -1,4 +1,7 @@
 import './App.css';
+import {useState, useEffect} from "react";
+import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
+
 import Home from './components/Home'
 import HomeWelcome from './components/HomeWelcome'
 import Read from './components/Read'
@@ -10,11 +13,6 @@ import Train from './components/Train'
 import Profile from './components/Profile'
 import ReviewForm from './components/ReviewForm'
 import GymForm from './components/GymForm'
-
-
-import {useState, useEffect} from "react";
-import { Switch, Redirect, Route, NavLink } from 'react-router-dom'
-
 
 import BjjW from './WriteCo/BjjW'
 import BoxingW from './WriteCo/BoxingW'
@@ -42,15 +40,8 @@ const linkStyles = {
   transition: "background-color .15s ease-in-out, border .15s ease-in-out, color .15s ease-in-out" 
 };
 
-
-
 function AuthenticatedApp({ currentUser, setCurrentUser }) {
-const [arts, setArts] = useState([])
-// const [bjj, setBjj] = useState("")
-// const [box, setBox] = useState("")
-// const [cap, setCap] = useState("")
-// const [jkd, setJkd] = useState("")
-// const [thai, setThai] = useState("")
+  const [arts, setArts] = useState([])
 
   const handleLogout = () => {
     fetch(`/logout`, {
@@ -68,14 +59,9 @@ const [arts, setArts] = useState([])
       .then(res => res.json())
       .then(arts => {
         setArts(arts)
-        // setBjj(arts[0].bjj)
       })
   }, [setArts])
 
-  // console.log(arts[0].bjj)
-  // console.log(bjj)
-  
-// const thing = arts[0].bjj
   return (
     <div className="App">
       <nav>
@@ -83,15 +69,11 @@ const [arts, setArts] = useState([])
           <NavLink to="/home" style={linkStyles} activeStyle={{background: "gray"}}>Home</NavLink>
           <NavLink to="/train" style={linkStyles} activeStyle={{background: "gray"}}>Train</NavLink>
           <NavLink to="/learn" style={linkStyles} activeStyle={{background: "gray"}}>Learn</NavLink>
-          {/* <NavLink to="/read" style={linkStyles} activeStyle={{background: "gray"}}>Read</NavLink>
-          <NavLink to="/write" style={linkStyles} activeStyle={{background: "gray"}}>Write</NavLink> */}
-          {/* <NavLink to="/profile" style={linkStyles} activeStyle={{background: "gray"}}>{currentUser.username}</NavLink>{" - "} */}
           <NavLink to="/profile" style={linkStyles} activeStyle={{background: "gray"}}>{currentUser.username}</NavLink>
-
         </span>
         <span>Logged in as {currentUser.email} <button onClick={handleLogout}>Logout</button></span>
       </nav>
-      {/* {thing} */}
+
       <Switch>
 
         <Route path="/learn">
@@ -141,7 +123,6 @@ const [arts, setArts] = useState([])
         <Route path='/capoeiraW'>
           <CapoeiraW  />
         </Route>
-
 
         <Route path='/capoeiraR'>
           <CapoeiraR  />

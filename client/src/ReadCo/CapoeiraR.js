@@ -1,28 +1,21 @@
-import { useHistory, useLocation, Redirect, NavLink } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
 import {useState, useEffect} from "react";
-
 import parse from 'html-react-parser';
 
 const linkStyles = {
-    display: "inline-block",
-    width: "100px",
-    padding: "5px",
-    margin: "0 6px 6px",
-    background: "black",
-    textDecoration: "none",
-    color: "white",
-  };
+  display: "inline-block",
+  width: "100px",
+  padding: "5px",
+  margin: "0 6px 6px",
+  background: "black",
+  textDecoration: "none",
+  color: "white",
+};
 
-  const otherLinkStyles = {
-    // display: "inline-block",
-    width: "85px",
-    padding: "2px",
-    // margin: "0 6px 6px",
-    // background: "transparent",
-    // textDecoration: "none",
-    // color: "black",  
-  };
-
+const otherLinkStyles = {
+  width: "85px",
+  padding: "2px",
+};
 
   function CapoeiraR (props){
     const history = useHistory();
@@ -32,16 +25,12 @@ const linkStyles = {
         fetch("/arts")
           .then(res => res.json())
           .then(cap => {
-            //   console.log(bjj[0].bjj)
             setCap(cap[0].capoeira)
           })
       }, [setCap])
-  
-      // console.log(typeof bjj)
-  
-      const rend = cap.toString()
-  
-    // console.log(props);
+
+    const rend = cap.toString()
+
       return(
           <div>
             <nav>
@@ -51,43 +40,18 @@ const linkStyles = {
             <NavLink to="/jkdR" style={linkStyles} activeStyle={{background: "gray"}}>JKD</NavLink>
             <NavLink to="/capoeiraR" style={linkStyles} activeStyle={{background: "gray"}}>Capoeira</NavLink>
             </nav>
-
-              <button 
+            
+            <button 
           style={otherLinkStyles}
           onClick={() => history.push("/capoeiraW")} 
-          >Edit</button>
-  
-          {/* <h1>Expand Your Mind</h1> */}
-  
-          {/* {ReactHtmlParser(`${bjj}`)} */}
-  
+          >Edit
+          </button>
+          
           <div id="img">
           <div id="card">
           <div id="list">{parse(rend)}</div>
           </div>
           </div>
-  
-          {/* <video
-              autoPlay
-              loop
-              muted
-              style={{
-                position: 'fixed',
-                width: "100%",
-                left: "50%",
-                top: "50%",
-                height: "115%",
-                objectFit: "cover",
-                transform: "translate(-50%, -50%)",
-                zIndex: "-1",
-                overflow: "hidden"
-              }}
-              >
-                <source src={Video} type="video/mp4" />
-            </video> */}
-  
-  
-  
           </div>
       )
   }
