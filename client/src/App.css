@@ -1,59 +1,54 @@
-
-
 @media (min-aspect-ratio: 16/9) {
   #vid {
-      width:100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 }
 
 @media (max-aspect-ratio: 16/9) {
-  #vid { 
-      width:auto;
-      height: 100%;
+  #vid {
+    width: auto;
+    height: 100%;
   }
 }
 
-
-
-#img img{
-  width:40%;
+#img img {
+  width: 40%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
-
 }
 
 #card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
-  width:70%;
+  width: 70%;
   margin: 0 auto;
 }
 
-#list a{
-    color: blue;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    /* text-shadow: 10px 10px 5px grey; */
-    text-shadow: 2.5px 2.5px 10px grey;
+#list a {
+  color: blue;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  /* text-shadow: 10px 10px 5px grey; */
+  text-shadow: 2.5px 2.5px 10px grey;
 }
 
-#list h2{
+#list h2 {
   color: black;
   font-size: 40px;
   text-shadow: 5px 5px 5px grey;
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: "Cinzel Decorative", cursive;
 }
 
-#listW h2{
+#listW h2 {
   color: black;
   font-size: 40px;
   /* text-shadow: 5px 5px 5px grey;
   font-family: 'Cinzel Decorative', cursive; */
 }
 
-#listW a{
+#listW a {
   color: blue;
   background-color: transparent;
   border: none;
@@ -62,44 +57,43 @@
   /* text-shadow: 5px 5px 5px grey; */
 }
 
-textarea#art  {
+textarea#art {
   border-radius: 10px;
-	width: 100%;
-	height: 500px;
-	resize: none;
-	/* margin-left: 10%; */
-	font-size: 18px;
+  width: 100%;
+  height: 500px;
+  resize: none;
+  /* margin-left: 10%; */
+  font-size: 18px;
 }
 
 textarea {
   border-radius: 10px;
-	width: 80%;
-	height: 185px;
-	resize: none;
-	/* margin-left: 10%; */
-	font-size: 18px;
+  width: 80%;
+  height: 185px;
+  resize: none;
+  /* margin-left: 10%; */
+  font-size: 18px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 textarea:focus {
-	outline: none;
+  outline: none;
 }
 
 input:focus {
-	outline: none;
+  outline: none;
 }
 
 .signAuthForm {
   height: 700px;
-  display:flex;
+  display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   margin: 8em auto;
   width: 380px;
-  max-width:380;
+  max-width: 380;
   background: rgba(181, 181, 181, 0.92);
-  text-align:center;
+  text-align: center;
   border: 2px solid #40413f;
   box-shadow: 5px 5px 10px grey;
   border-radius: 20px;
@@ -109,9 +103,9 @@ input:focus {
   /* position: fixed; */
   /* display: inline-block; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-border-radius: 10px;
+  border-radius: 10px;
   width: 200px;
-  padding: 0.30rem;
+  padding: 0.3rem;
   max-width: 150%;
   min-width: 100%;
   margin-bottom: 10px;
@@ -124,13 +118,11 @@ border-radius: 10px;
   /* position: fixed; */
   /* display: inline-block; */
   /* width: 700rem; */
-  padding: 0.30rem;
+  padding: 0.3rem;
   /* max-width: 100%; */
   margin-bottom: 20px;
   padding-bottom: 20px;
-
 }
-
 
 .authForm input {
   width: 16rem;
@@ -140,7 +132,7 @@ border-radius: 10px;
   font-size: 17px;
 }
 
-.authForm label{
+.authForm label {
   display: inline-block;
   width: 6rem;
   vertical-align: top;
@@ -166,7 +158,6 @@ border-radius: 10px;
   font-size: 17px;
 }
 
-
 .App {
   text-align: center;
 }
@@ -181,4 +172,3 @@ border-radius: 10px;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
