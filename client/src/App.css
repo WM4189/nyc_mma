@@ -1,3 +1,7 @@
+/* img.video-thumb.tiny, video#vid {
+  overflow: hidden;
+} */
+
 @media (min-aspect-ratio: 16/9) {
   #vid {
     width: 100%;

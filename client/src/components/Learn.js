@@ -11,12 +11,12 @@ function Learn(props) {
   return (
     <div>
       <span>{LearnNavR}</span>
-      <img
+      {/* <img
         src="https://res.cloudinary.com/audio/image/upload/v1638648696/guygirl_vfvg0u.png"
         className="video-thumb tiny"
         alt="thumb"
         style={{ opacity: isVideoLoaded ? 0 : 1 }}
-      />
+      /> */}
       <video
         id="vid"
         playsInline
@@ -34,7 +34,7 @@ function Learn(props) {
           transform: "translate(-50%, -50%)",
           zIndex: "-1",
           overflow: "hidden",
-          opacity: isVideoLoaded ? 1 : 0,
+          opacity: isVideoLoaded ? 1 : 0
         }}
       >
         <source

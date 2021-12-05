@@ -30,12 +30,12 @@ function Home() {
           </div>
         </div>
       </div>
-      <img
+      {/* <img
         src="https://res.cloudinary.com/audio/image/upload/v1638648694/girl_hvmnco.png"
         className="video-thumb tiny"
         alt="thumb"
         style={{ opacity: isVideoLoaded ? 0 : 1 }}
-      />
+      /> */}
       <video
         id="vid"
         playsInline
@@ -53,7 +53,7 @@ function Home() {
           transform: "translate(-50%, -50%)",
           zIndex: "-1",
           overflow: "hidden",
-          opacity: isVideoLoaded ? 1 : 0,
+          opacity: isVideoLoaded ? 1 : 0
         }}
       >
         <source
