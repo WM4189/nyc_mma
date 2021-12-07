@@ -23,7 +23,7 @@ function Learn(props) {
         }}
       >
         <source
-          src="https://res.cloudinary.com/audio/video/upload/v1638375669/co_ed_cuznuv.mp4"
+          src="https://res.cloudinary.com/audio/video/upload/v1638862749/coSauce_jeoqri.mp4"
           type="video/mp4"
         />
       </video>
