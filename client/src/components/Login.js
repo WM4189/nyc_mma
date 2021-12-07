@@ -17,8 +17,8 @@ const linkStyles = {
 
 function Login({ setCurrentUser }) {
   const history = useHistory();
-  const [username, setUsername] = useState("Guest");
-  const [password, setPassword] = useState("password");
+  const [username, setUsername] = useState("GUEST");
+  const [password, setPassword] = useState("HowNowBrownCow666");
 
   const handleSubmit = (event) => {
     event.preventDefault();
