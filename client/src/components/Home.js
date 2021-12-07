@@ -1,4 +1,6 @@
 import { useHistory } from "react-router-dom";
+import pic from "../images/girlPic.png";
+
 
 function Home() {
   const history = useHistory();
@@ -25,6 +27,7 @@ function Home() {
       </div>
       <video
         id="vid"
+        poster={pic}
         playsInline
         autoPlay
         loop

@@ -1,4 +1,5 @@
 import LearnNavR from "./LearnNavR";
+import pic from "../images/guyGirlPic.png";
 
 function Learn(props) {
   return (
@@ -6,6 +7,7 @@ function Learn(props) {
       <span>{LearnNavR}</span>
       <video
         id="vid"
+        poster={pic}
         playsInline
         autoPlay
         loop
