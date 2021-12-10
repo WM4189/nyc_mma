@@ -1,7 +1,7 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import pic from "./images/guyPic.png";
+import vid from "./videos/old.mp4";
 
 function UnauthenticatedApp({ setCurrentUser }) {
   return (
@@ -17,7 +17,7 @@ function UnauthenticatedApp({ setCurrentUser }) {
       </Switch>
       <video
         id="vid"
-        poster={pic}
+        // poster={pic}
         playsInline
         autoPlay
         loop
@@ -35,7 +35,8 @@ function UnauthenticatedApp({ setCurrentUser }) {
         }}
       >
         <source
-          src="https://res.cloudinary.com/audio/video/upload/v1638860201/oldSauce_nkxfbi.mp4"
+          // src="https://res.cloudinary.com/audio/video/upload/v1638860201/oldSauce_nkxfbi.mp4"
+          src={vid}
           type="video/mp4"
         />
       </video>

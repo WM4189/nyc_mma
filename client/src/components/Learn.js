@@ -1,5 +1,5 @@
 import LearnNavR from "./LearnNavR";
-import pic from "../images/guyGirlPic.png";
+import vid from "../videos/co.mp4";
 
 function Learn(props) {
   return (
@@ -7,7 +7,7 @@ function Learn(props) {
       <span>{LearnNavR}</span>
       <video
         id="vid"
-        poster={pic}
+        // poster={pic}
         playsInline
         autoPlay
         loop
@@ -25,7 +25,8 @@ function Learn(props) {
         }}
       >
         <source
-          src="https://res.cloudinary.com/audio/video/upload/v1638862749/coSauce_jeoqri.mp4"
+          // src="https://res.cloudinary.com/audio/video/upload/v1638862749/coSauce_jeoqri.mp4"
+          src={vid}
           type="video/mp4"
         />
       </video>

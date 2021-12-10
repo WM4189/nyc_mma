@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import pic from "../images/girlPic.png";
+import vid from "../videos/young.mp4";
 
 
 function Home() {
@@ -27,7 +27,7 @@ function Home() {
       </div>
       <video
         id="vid"
-        poster={pic}
+        // poster={pic}
         playsInline
         autoPlay
         loop
@@ -45,7 +45,8 @@ function Home() {
         }}
       >
         <source
-          src="https://res.cloudinary.com/audio/video/upload/v1638862603/youngSauce_k2y2oh.mp4"
+          // src="https://res.cloudinary.com/audio/video/upload/v1638862603/youngSauce_k2y2oh.mp4"
+          src={vid}
           type="video/mp4"
         />
       </video>
