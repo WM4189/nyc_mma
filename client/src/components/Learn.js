@@ -7,7 +7,6 @@ function Learn(props) {
       <span>{LearnNavR}</span>
       <video
         id="vid"
-        // poster={pic}
         playsInline
         autoPlay
         loop
@@ -24,11 +23,7 @@ function Learn(props) {
           overflow: "hidden",
         }}
       >
-        <source
-          // src="https://res.cloudinary.com/audio/video/upload/v1638862749/coSauce_jeoqri.mp4"
-          src={vid}
-          type="video/mp4"
-        />
+        <source src={vid} type="video/mp4" />
       </video>
     </div>
   );

@@ -17,7 +17,6 @@ function UnauthenticatedApp({ setCurrentUser }) {
       </Switch>
       <video
         id="vid"
-        // poster={pic}
         playsInline
         autoPlay
         loop
@@ -34,11 +33,7 @@ function UnauthenticatedApp({ setCurrentUser }) {
           overflow: "hidden",
         }}
       >
-        <source
-          // src="https://res.cloudinary.com/audio/video/upload/v1638860201/oldSauce_nkxfbi.mp4"
-          src={vid}
-          type="video/mp4"
-        />
+        <source src={vid} type="video/mp4" />
       </video>
     </>
   );
